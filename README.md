@@ -4,7 +4,7 @@
 ##### October 29, 2020 
 
 [![Generic badge](https://img.shields.io/badge/license-MIT-green.svg?style=plastic&labelColor=36566F)](https://shields.io/)
-![GitHub last commit](https://img.shields.io/github/last-commit/GreanBeetle/trivia?style=plastic&labelColor=36566F)
+![GitHub last commit](https://img.shields.io/github/last-commit/GreanBeetle/react-native-2020?style=plastic&labelColor=36566F)
 ![React Native](https://img.shields.io/static/v1?message=React-Native&color=61dafb&style=plastic&logo=react&label=&labelColor=36566F)
 ![TypeScript](https://img.shields.io/static/v1?message=TypeScript&color=007acc&style=plastic&logo=typescript&label=&labelColor=36566F&logoColor=007acc)
 ![JavaScript](https://img.shields.io/static/v1?message=JavaScript&color=F7DF1E&style=plastic&logo=javascript&label=&labelColor=36566F&logoColor=F7DF1E)
