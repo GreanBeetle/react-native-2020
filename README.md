@@ -8,6 +8,7 @@
 ![React Native](https://img.shields.io/static/v1?message=React-Native&color=61dafb&style=plastic&logo=react&label=&labelColor=36566F)
 ![TypeScript](https://img.shields.io/static/v1?message=TypeScript&color=007acc&style=plastic&logo=typescript&label=&labelColor=36566F&logoColor=007acc)
 ![JavaScript](https://img.shields.io/static/v1?message=JavaScript&color=F7DF1E&style=plastic&logo=javascript&label=&labelColor=36566F&logoColor=F7DF1E)
+![Redux](https://img.shields.io/static/v1?message=Redux&color=764ABC&style=plastic&logo=redux&label=&labelColor=36566F&logoColor=764ABC)
 
 This is a master repository for a collection of small to medium-sized React Native applications. Each app was (or will be) built for one of Steven Grider's courses. Specifically, his ["The Complete React Native + Hooks Course [2020 Edition]"](https://www.udemy.com/course/the-complete-react-native-and-redux-course/). 
 
