@@ -12,6 +12,8 @@
 
 This is a master repository for a collection of small to medium-sized React Native applications. Each app was (or will be) built for one of Steven Grider's courses. Specifically, his ["The Complete React Native + Hooks Course [2020 Edition]"](https://www.udemy.com/course/the-complete-react-native-and-redux-course/). 
 
+[The official repository for the entire course is here.](https://github.com/StephenGrider/rn-casts)
+
 The goal here is to simply stay on top of the latest React Native features and best practices, even if I am already familiar with many of the topics covered. Among other things, the various apps in this repo delve into:   
 
 * FlatList  
