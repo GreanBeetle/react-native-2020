@@ -4,19 +4,19 @@ import { STYLES } from '../styles'
 
 const ListScreen = () => {
   const list = [
-    { name: 'Hans'},
-    { name: 'Franz' },
-    { name: 'Jane' },
-    { name: 'Miname' },
-    { name: 'Mona' },
-    { name: 'Mina' },
-    { name: 'Myrna' },
-    { name: 'Micah' },
-    { name: 'Myopa' },
-    { name: 'Maca' },
-    { name: 'Nana' },
-    { name: 'Nina' },
-    { name: 'Nona' },
+    { name: 'Hans', age: 99 },
+    { name: 'Franz', age: 88 },
+    { name: 'Jane', age: 77 },
+    { name: 'Miname', age: 66 },
+    { name: 'Mona', age: 55 },
+    { name: 'Mina', age: 44 },
+    { name: 'Myrna', age: 33 },
+    { name: 'Micah', age: 22 },
+    { name: 'Myopa', age: 11 },
+    { name: 'Maca', age: 'zero, bitches' },
+    { name: 'Nana', age: 111 },
+    { name: 'Nina', age: 222 },
+    { name: 'Nona', age: 333 },
   ]
 
   return (
@@ -34,7 +34,7 @@ const ListScreen = () => {
 
         // destructure the { item } argument from element
         // if we did this renderItem={ element } we'd see element = { item: { id: x, name: y }}
-        renderItem={({item}) => <Text style={styles.textStyle}>{item.name}</Text> } 
+        renderItem={({item}) => <Text style={styles.textStyle}>{item.name}: age {item.age}</Text> } 
         
         // key must be unique
         // key must be string
