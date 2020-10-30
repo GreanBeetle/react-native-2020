@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet, Button, TouchableOpacity } from "react-native"
-import { STYLES } from '../styles'
+import STYLES from '../styles'
 
 const HomeScreen = ({ navigation }) => {
   console.log('nav object', navigation)
@@ -24,6 +24,7 @@ const HomeScreen = ({ navigation }) => {
       <CustomButton title="list demo" onPress={() => navigation.push('List')} />
       <CustomButton title="image demo" onPress={() => navigation.push('Image')} />
       <CustomButton title="counter demo" onPress={() => navigation.push('Counter')} />
+      <CustomButton title="color demo" onPress={() => navigation.push('Color')} />
     </View>
   )
 
@@ -34,9 +35,9 @@ const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   touchableOpacity: {
     margin: 10,
-    height: 120, 
-    width: 120, 
-    borderRadius: 60, 
+    height: 60, 
+    width: 240, 
+    borderRadius: 30, 
     backgroundColor: '#EA2027'
   }, 
   text: {

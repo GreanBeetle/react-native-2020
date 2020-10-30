@@ -1,17 +1,16 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import STYLES from '../styles'
 
 const ComponentsScreen = () => {
   const name = 'John'
   return (
-    <View>
+    <View style={STYLES.centered}>
       <Text style={styles.text}>Getting started with RN</Text>
       <Text style={styles.name}>My name is {name}</Text>
     </View>
   ) 
 }
-
-export default ComponentsScreen
 
 const styles = StyleSheet.create({
   text: {
@@ -21,3 +20,5 @@ const styles = StyleSheet.create({
     fontSize: 20
   }
 })
+
+export default ComponentsScreen

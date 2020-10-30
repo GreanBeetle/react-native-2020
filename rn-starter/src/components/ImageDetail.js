@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
-import { STYLES } from '../styles'
+import STYLES from '../styles'
 
 const ImageDetail = ({ title, imageSource, score }) => {
   return (
