@@ -8,7 +8,6 @@ const ImageDetail = ({ title, imageSource, score }) => {
       <Image source={imageSource} />
       <View style={[STYLES.container, styles.textContainer]}>
         <Text >{title} SCORE: {score}</Text>
-
       </View>
     </View>
   )
