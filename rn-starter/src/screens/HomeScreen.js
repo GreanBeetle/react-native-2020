@@ -9,7 +9,6 @@ const HomeScreen = ({ navigation }) => {
   // using the "button primitive" 
   const button = (
     <View style={STYLES.centered}>
-      <Text>what up</Text>
       <Button title="components demo" onPress={() => navigation.push('Components')} />
       <Button title="list demo" onPress={() => navigation.push('List')} />
     </View>
@@ -19,7 +18,6 @@ const HomeScreen = ({ navigation }) => {
   // highly customizable 
   const touchableOpacity = (
     <View style={STYLES.centered}>
-      <Text>what up</Text>
       <TouchableOpacity onPress={() => navigation.push('Components')}>
         <View style={[STYLES.center, styles.touchableOpacity]}>
           <Text style={styles.text}>component demo</Text>
