@@ -3,9 +3,11 @@ import { Text, View, StyleSheet, Button, TouchableOpacity } from "react-native"
 import { STYLES } from '../styles'
 
 const HomeScreen = ({ navigation }) => {
+  console.log('nav object', navigation)
+  let content
 
   // using the "button primitive" 
-  let content = (
+  const button = (
     <View style={STYLES.centered}>
       <Text>what up</Text>
       <Button title="components demo" onPress={() => navigation.push('Components')} />
@@ -15,7 +17,7 @@ const HomeScreen = ({ navigation }) => {
 
   // button created with touchable opacity
   // highly customizable 
-  let buttonTouchableOpacity = (
+  const touchableOpacity = (
     <View style={STYLES.centered}>
       <Text>what up</Text>
       <TouchableOpacity onPress={() => navigation.push('Components')}>
@@ -30,15 +32,14 @@ const HomeScreen = ({ navigation }) => {
       </TouchableOpacity>
     </View>
   )
-
-  content = buttonTouchableOpacity
+  content = touchableOpacity
   return content 
 } 
 
 
 const styles = StyleSheet.create({
   touchableOpacity: {
-    margin: 25,
+    margin: 10,
     height: 60, 
     width: 300, 
     borderRadius: 30, 
