@@ -15,9 +15,8 @@ This is a master repository for a collection of small to medium-sized React Nati
 [The official repository for the entire course is here.](https://github.com/StephenGrider/rn-casts)
 
 The goal here is to simply stay on top of the latest React Native features and best practices, even if I am already familiar with many of the topics covered. Among other things, the various apps in this repo delve into:   
-
-* FlatList  
-* Navigation with React Navigation 5
+ 
+* React Navigation 5
 * Redux, Actions, Reducers
 * "Gotchas" regarding State 
 * _Not_ mutating state 
