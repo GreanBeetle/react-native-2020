@@ -1,11 +1,11 @@
-import ComponentScreen from './ComponentsScreen'
+import ComponentsScreen from './ComponentsScreen'
 import CounterScreen from './CounterScreen'
 import HomeScreen from './HomeScreen'
 import ImageScreen from './ImageScreen'
 import ListScreen from './ListScreen'
 
 export {
-  ComponentScreen, 
+  ComponentsScreen, 
   CounterScreen, 
   HomeScreen,
   ImageScreen,

@@ -6,46 +6,37 @@ const HomeScreen = ({ navigation }) => {
   console.log('nav object', navigation)
   let content
 
-  // using the "button primitive" 
-  const button = (
+  // button created using TouchableOpacity
+  // highly customizable 
+  const CustomButton = ({ onPress, title }) => 
+    <TouchableOpacity onPress={onPress}>
+      <View style={[STYLES.center, styles.touchableOpacity]}>
+        <Text style={styles.text}>{title}</Text>
+      </View>
+    </TouchableOpacity>
+  
+  // button using using the "button primitive" 
+  const button = <Button title="components demo" onPress={() => navigation.push('Components')} />
+ 
+  content = (
     <View style={STYLES.centered}>
-      <Button title="components demo" onPress={() => navigation.push('Components')} />
-      <Button title="list demo" onPress={() => navigation.push('List')} />
+      <CustomButton title="component demo" onPress={() => navigation.push('Components')} />
+      <CustomButton title="list demo" onPress={() => navigation.push('List')} />
+      <CustomButton title="image demo" onPress={() => navigation.push('Image')} />
+      <CustomButton title="counter demo" onPress={() => navigation.push('Counter')} />
     </View>
   )
 
-  // button created with touchable opacity
-  // highly customizable 
-  const touchableOpacity = (
-    <View style={STYLES.centered}>
-      <TouchableOpacity onPress={() => navigation.push('Components')}>
-        <View style={[STYLES.center, styles.touchableOpacity]}>
-          <Text style={styles.text}>component demo</Text>
-        </View>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.push('List')}>
-        <View style={[STYLES.center, styles.touchableOpacity]}>
-          <Text style={styles.text}>list demo</Text>
-        </View>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.push('Image')}>
-        <View style={[STYLES.center, styles.touchableOpacity]}>
-          <Text style={styles.text}>image demo</Text>
-        </View>
-      </TouchableOpacity>
-    </View>
-  )
-  content = touchableOpacity
-  return content 
+  return content  
 } 
 
 
 const styles = StyleSheet.create({
   touchableOpacity: {
     margin: 10,
-    height: 60, 
-    width: 300, 
-    borderRadius: 30, 
+    height: 120, 
+    width: 120, 
+    borderRadius: 60, 
     backgroundColor: '#EA2027'
   }, 
   text: {
