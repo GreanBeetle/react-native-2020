@@ -30,6 +30,11 @@ const HomeScreen = ({ navigation }) => {
           <Text style={styles.text}>list demo</Text>
         </View>
       </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.push('Image')}>
+        <View style={[STYLES.center, styles.touchableOpacity]}>
+          <Text style={styles.text}>image demo</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   )
   content = touchableOpacity
