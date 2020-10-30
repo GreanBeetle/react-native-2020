@@ -24,7 +24,7 @@ const ListScreen = () => {
       <FlatList
         // same as horiztonal={true}
         // makes list scroll horizontally 
-        horizontal
+        // horizontal
 
         // hide whichever scrollbar you need to hide 
         showsHorizontalScrollIndicator={false}

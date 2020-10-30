@@ -8,6 +8,10 @@ export const STYLES = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
+  }, 
+  center: {
+    alignItems: 'center', 
+    justifyContent: 'center'
   }
 }) 
   
