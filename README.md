@@ -18,14 +18,11 @@ The goal here is to simply stay on top of the latest React Native features and b
 
 * FlatList  
 * Navigation with React Navigation 5
-* Reusable components
-* Images
-* State Management at the Component Level
 * Redux, Actions, Reducers
 * "Gotchas" regarding State 
 * _Not_ mutating state 
 * Layout, Flex, Absolute Fill Objects, Box Object Model 
-* Incorporating "outside" or 3rd-party APIs
+* 3rd-party APIs
 * Hooks, reusable and otherwise
 * Constraining views 
 * "WithNavigation" helper
