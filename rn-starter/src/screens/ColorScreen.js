@@ -1,5 +1,12 @@
 import React, { useState } from 'react'
-import { SafeAreaView, View, Button, StyleSheet, Dimensions } from 'react-native'
+import { 
+  SafeAreaView, 
+  View, 
+  Button, 
+  StyleSheet, 
+  Dimensions, 
+  FlatList 
+} from 'react-native'
 import STYLES from '../styles'
 
 const ColorScreen = () => {
@@ -7,17 +14,16 @@ const ColorScreen = () => {
   const ColorView = ({ color }) => <View style={{ height: side, width: side, backgroundColor: color }} />
   const [colors, setColors] = useState([])
 
-  const addColor = () => {
-    const newColor = <ColorView color={randomRGB()} />
-    setColors([...colors, newColor])
-  }
-
+  const addColor = () => setColors([...colors, randomRGB()])
+  
   return (
     <SafeAreaView style={STYLES.centered}>
       <Button title="add color" onPress={() => addColor()}/>
-      <View style={styles.colorsContainer}>
-        {colors.map(e => e)}
-      </View>
+      <FlatList 
+        horizontal
+        data={colors}
+        renderItem={({item}) => <ColorView color={item}/>} 
+        keyExtractor={item => item}/>
     </SafeAreaView>
   )
 }
