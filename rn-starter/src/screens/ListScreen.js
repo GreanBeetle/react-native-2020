@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, SafeAreaView, Text, StyleSheet, FlatList } from 'react-native'
+import { SafeAreaView, Text, StyleSheet, FlatList } from 'react-native'
 import STYLES from '../styles'
 
 const ListScreen = () => {

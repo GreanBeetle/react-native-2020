@@ -4,6 +4,7 @@ import CounterScreen from './CounterScreen'
 import HomeScreen from './HomeScreen'
 import ImageScreen from './ImageScreen'
 import ListScreen from './ListScreen'
+import SquareScreen from './SquareScreen'
 
 export {
   ColorScreen,
@@ -11,5 +12,6 @@ export {
   CounterScreen, 
   HomeScreen,
   ImageScreen,
-  ListScreen
+  ListScreen, 
+  SquareScreen
 }

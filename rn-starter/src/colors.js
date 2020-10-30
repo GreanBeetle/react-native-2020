@@ -14,7 +14,14 @@ const COLORS = {
   accentBlue: '#205072',
   accentLightBlue: '#329D9C',
   accentAqua: '#56C596',
-  accentMint: '#CFF4D2'
+  accentMint: '#CFF4D2',
+  purpleLovePurple: '#753a88',
+  purpleLovePink: '#cc2b5e',
+  oceanBlueBlue: '#2E3192',
+  oceanBlueAqua: '#1BFFFF',
+  antarcticPurple: '#D8B5FF', 
+  antarcticAqua: '#1EAE98' 
+
 }
 
 export default COLORS
