@@ -37,8 +37,6 @@ const styles = StyleSheet.create({
     borderColor: COLORS.purpleLovePink,
     backgroundColor: COLORS.purpleLovePurple
   }, 
-
- 
   text: {
     color: COLORS.purpleLovePink, 
     fontSize: 18
