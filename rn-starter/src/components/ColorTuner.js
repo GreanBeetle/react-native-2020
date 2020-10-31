@@ -3,21 +3,20 @@ import { View, Text, StyleSheet, Dimensions, TouchableOpacity } from 'react-nati
 import STYLES from '../styles'
 import COLORS from '../colors'
 
-const ColorTuner = ({ onPressUp, onPressDown }) => {
+const ColorTuner = ({ color, onPressUp, onPressDown }) => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
+      <Text>{color}</Text>
+      <TouchableOpacity onPress={() => onPressUp()}>
         <View style={[styles.button, STYLES.center,{ borderBottomWidth: 0}]}>
           <Text style={styles.text}> + </Text>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => onPressDown()}>
         <View style={[styles.button, STYLES.center]}>
           <Text style={styles.text}> - </Text>
-
         </View>
       </TouchableOpacity>
-      
     </View>
   )
 }
