@@ -27,12 +27,12 @@ const HomeScreen = ({ navigation }) => {
       <CustomButton title="counter demo" onPress={() => navigation.push('Counter')} />
       <CustomButton title="colors demo" onPress={() => navigation.push('Color')} />
       <CustomButton title="square demo" onPress={() => navigation.push('Square')} />
+      <CustomButton title="text input" onPress={() => navigation.push('Text')} />
     </View>
   )
 
   return content  
 } 
-
 
 const styles = StyleSheet.create({
   touchableOpacity: {

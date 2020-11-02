@@ -50,6 +50,7 @@ The goal here is to simply stay on top of the latest React Native features and b
 * `props` -> `rn-starter` -> `ImageScreen`  
 * `reducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen
 * reusable components -> `rn-starter` -> `ImageDetail`
+* `TextInput` -> `rn-starter` -> 
 * `useReducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen`
 * `useState` -> `rn-starter` -> `CounterScreenCopy` and `ColorScreen`
 

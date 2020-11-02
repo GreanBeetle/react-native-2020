@@ -11,9 +11,9 @@ const AMOUNT = 7
 const reducer = (state, action) => {
   switch(action.type) {
     case 'INCREMENT_COUNTER':
-      return { counter: state.counter + action.payload } 
+      return { ...state, counter: state.counter + action.payload } // ALWAYS spread ...state because you never know how app state will grow 
     case 'DECREMENT_COUNTER':
-      return { counter: state.counter - action.payload } 
+      return { ...state, counter: state.counter - action.payload } 
     case 'RESET_COUNTER':  
       return { counter: 0 } 
     default: 
