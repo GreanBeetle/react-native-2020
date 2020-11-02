@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react'
-import { View, Text, StyleSheet, Button, ActionSheetIOS } from 'react-native'
+import { View, Text, StyleSheet, Button } from 'react-native'
 import STYLES from '../styles'
 
 const AMOUNT = 7 
