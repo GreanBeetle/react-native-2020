@@ -8,26 +8,30 @@ const COLOR_INCREMENT = 15
 /** 
   @param {object} state { red: number, green: number, blue: number }
   @param {object} action { colorToChange: 'red' || 'green' || 'blue', amount: 15 || -15 }
-  think of action as "how to change state"
 */ 
 const reducer = (state, action) => {
   switch(action.colorToChange) {
     case 'red':
-      // never mutate state directly: state.red = state.red - 15
-      return { ...state, red: state.red + action.amount }
+      return state.red + action.amount < 0 || state.red + action.amount > 255 
+        ? state
+        : { ...state, red: state.red + action.amount }
     case 'green':
-      return { ...state, green: state.green + action.amount }
+      return state.green + action.amount < 0 || state.green + action.amount > 255
+        ? state
+        : { ...state, green: state.green + action.amount }
     case 'blue': 
-      return { ...state, blue: state.blue + action.amount }
+      return state.blue + action.amount < 0 || state.blue + action.amount > 255
+        ? state
+        : { ...state, blue: state.blue + action.amount }
     default:
       return state 
   }
-} 
+}
 
 const SquareScreen = () => { 
   /* 
-    a reducer is a function that manages changes to an object
-    first argument to useReducer is the function that manipulates state, i.e. reducer
+    a reducer is a function that manages change to an object
+    first argument to useReducer is the function that manipulates state, i.e. reducer()
     the second argument is the initial value for state, i.e. {red: 0, green: 0, blue: 0} 
 
     useReducer always returns two things 
