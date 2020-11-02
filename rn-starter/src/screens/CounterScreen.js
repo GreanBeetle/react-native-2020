@@ -1,28 +1,34 @@
-import React, { useState } from 'react'
-import { View, Text, StyleSheet, Button } from 'react-native'
+import React, { useReducer } from 'react'
+import { View, Text, StyleSheet, Button, ActionSheetIOS } from 'react-native'
 import STYLES from '../styles'
 
-const CounterScreen = () => {
-  /* 
-    a note on precisely what hooks are 
-    hooks are functions that add new functionality to function components 
-  */
-  const [counter, setCounter] = useState(0)
+const AMOUNT = 7 
 
-  /*
-    NEVER directly modify the variable in state 
-    never do this
-    counter++
-    as we've all learned from the beginning, simply use the setCounter function
-    setCounter(88) or setCounter(counter + 1) or setCounter(counter - 1) or whatever 
-  */
-  
+/**
+ * @param {object} state {counter: number} 
+ * @param {object} action {type: 'INCREMENT_NUMBER', payload: amount}
+ */
+const reducer = (state, action) => {
+  switch(action.type) {
+    case 'INCREMENT_COUNTER':
+      return { counter: state.counter + action.payload } 
+    case 'DECREMENT_COUNTER':
+      return { counter: state.counter - action.payload } 
+    case 'RESET_COUNTER':  
+      return { counter: 0 } 
+    default: 
+      return state
+  }
+}
+
+const CounterScreen = () => {
+  const [state, dispatch] = useReducer(reducer, {counter: 0})    
   return (
     <View style={STYLES.centered}>
-      <Button title="increment" onPress={() => setCounter(counter + 1)} />
-      <Button title="decrement" onPress={() => setCounter(counter - 1)} />
-      <Button title="reset" onPress={() => setCounter(0)} />
-      <Text>{counter}</Text>
+      <Button title="increment" onPress={() => dispatch({type: 'INCREMENT_COUNTER', payload: AMOUNT})} />
+      <Button title="decrement" onPress={() => dispatch({type: 'DECREMENT_COUNTER', payload: AMOUNT })} />
+      <Button title="reset" onPress={() => dispatch({type: 'RESET_COUNTER' })} />
+      <Text>{state.counter}</Text>
     </View>
   )
 }

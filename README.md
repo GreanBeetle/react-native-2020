@@ -44,14 +44,14 @@ The goal here is to simply stay on top of the latest React Native features and b
 
 ## Index
 
-* `Action` -> `rn-starter/src/screens/SquareScreen.js` 
-* `FlatList` -> `rn-starter/src/screens/ColorScreen.js`
-* `FlatList` -> `rn-starter/src/screens/ListScreen.js`
-* `props` -> `rn-starter/src/screens/ImageScreen`  
-* `reducer` -> `rn-starter/src/screens/SquareScreen`
-* reusable components -> `rn-starter/src/screens/ImageDetail`
-* `useReducer` -> `rn-starter/src/screens/SquareScreen`
-* `useState` -> `rn-starter/src/screens/CounterScreen` and `ColorScreen`
+* `action` -> `rn-starter` -> `SquareScreen.js` and `CounterScreen`
+* `FlatList` -> `rn-starter` -> `ColorScreen.js`
+* `FlatList` -> `rn-starter` -> `ListScreen.js`
+* `props` -> `rn-starter` -> `ImageScreen`  
+* `reducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen
+* reusable components -> `rn-starter` -> `ImageDetail`
+* `useReducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen`
+* `useState` -> `rn-starter` -> `CounterScreenCopy` and `ColorScreen`
 
 ### Author
 
