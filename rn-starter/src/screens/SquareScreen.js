@@ -1,17 +1,44 @@
-import React, { useState } from 'react'
+import React, { useReducer } from 'react'
 import { View, Text, StyleSheet, SafeAreaView } from 'react-native'
 import { ColorTuner } from '../components'
 import STYLES from '../styles'
 
 const COLOR_INCREMENT = 15
 
-const SquareScreen = () => {
-  const random = () => Math.floor(Math.random() * 256)
-  const [red, setRed] = useState(random())
-  const [green, setGreen] = useState(random())
-  const [blue, setBlue] = useState(random())
+/** 
+  @param {object} state { red: number, green: number, blue: number }
+  @param {object} action { colorToChange: 'red' || 'green' || 'blue', amount: 15 || -15 }
+  think of action as "how to change state"
+*/ 
+const reducer = (state, action) => {
+  switch(action.colorToChange) {
+    case 'red':
+      // never mutate state directly: state.red = state.red - 15
+      return { ...state, red: state.red + action.amount }
+    case 'green':
+      return { ...state, green: state.green + action.amount }
+    case 'blue': 
+      return { ...state, blue: state.blue + action.amount }
+    default:
+      return state 
+  }
+} 
 
-  const tune = (set, color) => color > 0 && color < 255 ? set(color) : null 
+const SquareScreen = () => { 
+  /* 
+    a reducer is a function that manages changes to an object
+    first argument to useReducer is the function that manipulates state, i.e. reducer
+    the second argument is the initial value for state, i.e. {red: 0, green: 0, blue: 0} 
+
+    useReducer always returns two things 
+    (1) a state object
+    (2) a dispatch() function or "runMyReducer()" function that takes an action object
+        for example dispatch({colorToChange: 'red, amount: -15})
+
+    dispatch() is the technical name but it can be anything ... 
+  */
+  const [state, dispatch] = useReducer(reducer, {red: 0, green: 0, blue: 0})
+  const {red, green, blue} = state
 
   return (
     <SafeAreaView style={STYLES.centered}>
@@ -20,18 +47,17 @@ const SquareScreen = () => {
       </View>
       <ColorTuner 
         color="red"
-        onPressUp={() => tune(setRed, red + COLOR_INCREMENT)} 
-        onPressDown={() => tune(setRed, red - COLOR_INCREMENT)}/>
+        onPressUp={() => dispatch({colorToChange: 'red', amount: COLOR_INCREMENT})} 
+        onPressDown={() => dispatch({colorToChange: 'red', amount: -1 * COLOR_INCREMENT})}/>
       <ColorTuner
         color="green"
-        onPressUp={() => tune(setGreen, green + COLOR_INCREMENT)}
-        onPressDown={() => tune(setGreen, green - COLOR_INCREMENT)} />
+        onPressUp={() => dispatch({colorToChange: 'green', amount: COLOR_INCREMENT})}
+        onPressDown={() => dispatch({colorToChange: 'green', amount: -1 * COLOR_INCREMENT})} />
       <ColorTuner
         color="blue"
-        onPressUp={() => tune(setBlue, blue + COLOR_INCREMENT)}
-        onPressDown={() => tune(setBlue, blue - COLOR_INCREMENT)} />
+        onPressUp={() => dispatch({colorToChange: 'blue', amount: COLOR_INCREMENT})}
+        onPressDown={() => dispatch({colorToChange: 'blue', amount: -1 * COLOR_INCREMENT})} />
       <View style={[styles.colorSquare, {backgroundColor: `rgb(${red}, ${green}, ${blue})`}]}/>
-
     </SafeAreaView>
   )
 }

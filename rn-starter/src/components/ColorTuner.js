@@ -21,8 +21,6 @@ const ColorTuner = ({ color, onPressUp, onPressDown }) => {
   )
 }
 
-console.log('height?', Dimensions.get('window').height / 6)
-
 const styles = StyleSheet.create({
   container: {
     height: Dimensions.get('window').height / 6, 

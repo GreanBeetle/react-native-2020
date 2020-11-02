@@ -42,6 +42,14 @@ The goal here is to simply stay on top of the latest React Native features and b
 * Processing authentication credentials
 * And more ... 
 
+## Index
+
+* `FlatList` -> `rn-starter/src/screens/ColorScreen.js`
+* `FlatList` -> `rn-starter/src/screens/ListScreen.js`
+* `props` -> `rn-starter/src/screens/ImageScreen`  
+* reusable components -> `rn-starter/src/screens/ImageDetail`
+* `useReducer` -> `rn-starter/src/screens/SquareScreen`
+* `useState` -> `rn-starter/src/screens/CounterScreen` and `ColorScreen`
 
 ### Author
 
