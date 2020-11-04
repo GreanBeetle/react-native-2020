@@ -47,9 +47,10 @@ The goal here is to simply stay on top of the latest React Native features and b
 * `action` -> `rn-starter` -> `SquareScreen.js` and `CounterScreen`
 * `FlatList` -> `rn-starter` -> `ColorScreen.js`
 * `FlatList` -> `rn-starter` -> `ListScreen.js`
+* Layout: Absolute Fill Objects -> `rn-starter` -> `BoxScreen` (cool stuff!) 
 * Layout: Flex Box -> `rn-starter` -> `BoxScreen.js`
 * Layout: `position: 'absolute'` -> `rn-starter` -> `BoxScreen.js` 
-* Layout: `top`, `bottom`, `left`, `right` -> `rn-starter` -> `BoxScreen` 
+* Layout: `top`, `bottom`, `left`, `right` -> `rn-starter` -> `BoxScreen`
 * `props` -> `rn-starter` -> `ImageScreen`  
 * `reducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen
 * reusable components -> `rn-starter` -> `ImageDetail`

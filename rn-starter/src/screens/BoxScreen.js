@@ -1,10 +1,10 @@
 import React from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, ScrollView, StyleSheet } from 'react-native'
 import COLORS from '../colors'
 
 const BoxScreen = () => {
   return (
-    <View>
+    <ScrollView>
       <View style={styles.viewStyle}>
         <Text style={styles.textOne}>Child #1</Text>
         <Text style={styles.textOne}>Child #2</Text>
@@ -35,7 +35,12 @@ const BoxScreen = () => {
         <Text style={styles.textTopBottomLeftRight}>Child #2</Text>
         <Text style={styles.textFive}>Child #3</Text>
       </View>
-    </View>
+      <View style={styles.viewAbsoluteFillOBject}>
+        <Text style={styles.text}>Child #1</Text>
+        <Text style={styles.textAbsoluteFillObject}>Child #2</Text>
+        <Text style={styles.text}>Child #3</Text>
+      </View>
+    </ScrollView>
   )
 }
 
@@ -99,6 +104,30 @@ const styles = StyleSheet.create({
     color: COLORS.actionGreen,
     left: 25 // top, bottom, left, and right execute AFTER everything else and ignore both sibling and parent elements 
   }, 
+
+  // styling for absolute fill object 
+  // a child element with absolute fill will complete fill its parent element 
+  viewAbsoluteFillOBject: {
+    borderWidth: 3, 
+    borderColor: COLORS.oceanBlueBlue,
+    height: 300,
+    margin: 25
+  },
+  text: {
+    borderWidth: 1, 
+    borderColor: COLORS.oceanBlueAqua, 
+  },
+  textAbsoluteFillObject: {
+    borderWidth: 1,
+    borderColor: COLORS.red,
+    color: COLORS.red,
+    // position: 'absolute', // combine with top: 0, bottom: 0, left: 0, right: 0 to completely fill parent object  
+    // top: 0,
+    // bottom: 0, 
+    // right: 0,
+    // left: 0, 
+    ...StyleSheet.absoluteFillObject // this is shorthand for postion: 'absolute', top: 0, bottom: 0, left: 0, right: 0
+  },  
 
   // styling for flexbox, box-object examples  
   viewStyle: {
