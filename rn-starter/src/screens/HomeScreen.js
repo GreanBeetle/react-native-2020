@@ -21,11 +21,12 @@ const HomeScreen = ({ navigation }) => {
  
   content = (
     <View style={STYLES.centered}>
-      <CustomButton title="component demo" onPress={() => navigation.push('Components')} />
-      <CustomButton title="list demo" onPress={() => navigation.push('List')} />
-      <CustomButton title="image demo" onPress={() => navigation.push('Image')} />
-      <CustomButton title="counter demo" onPress={() => navigation.push('Counter')} />
+      <CustomButton title="box object" onPress={() => navigation.push('Box')} />
       <CustomButton title="colors demo" onPress={() => navigation.push('Color')} />
+      <CustomButton title="component demo" onPress={() => navigation.push('Components')} />
+      <CustomButton title="counter demo" onPress={() => navigation.push('Counter')} />
+      <CustomButton title="image demo" onPress={() => navigation.push('Image')} />
+      <CustomButton title="list demo" onPress={() => navigation.push('List')} />
       <CustomButton title="square demo" onPress={() => navigation.push('Square')} />
       <CustomButton title="text input" onPress={() => navigation.push('Text')} />
     </View>

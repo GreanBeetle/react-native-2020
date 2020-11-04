@@ -47,6 +47,9 @@ The goal here is to simply stay on top of the latest React Native features and b
 * `action` -> `rn-starter` -> `SquareScreen.js` and `CounterScreen`
 * `FlatList` -> `rn-starter` -> `ColorScreen.js`
 * `FlatList` -> `rn-starter` -> `ListScreen.js`
+* Layout: Box Object Model -> `rn-starter` -> *(Affect position of single element)*
+* Layout: Flex Box  -> `rn-starter` -> *(Position multiple elements within single parent)*
+* Layout: Position ->  `rn-starter` -> *(Single element: Override Box Object Model and Flex Box)*
 * `props` -> `rn-starter` -> `ImageScreen`  
 * `reducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen
 * reusable components -> `rn-starter` -> `ImageDetail`

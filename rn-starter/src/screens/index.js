@@ -1,3 +1,4 @@
+import BoxScreen from './BoxScreen'
 import ColorScreen from './ColorScreen'
 import ComponentsScreen from './ComponentsScreen'
 import CounterScreen from './CounterScreen'
@@ -8,6 +9,7 @@ import SquareScreen from './SquareScreen'
 import TextScreen from './TextScreen'
 
 export {
+  BoxScreen,
   ColorScreen,
   ComponentsScreen, 
   CounterScreen, 
