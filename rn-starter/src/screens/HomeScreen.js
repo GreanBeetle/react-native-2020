@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet, Button, TouchableOpacity } from "react-native"
+import { Text, View, SafeAreaView, StyleSheet, Button, TouchableOpacity } from "react-native"
 import STYLES from '../styles'
 import COLORS from '../colors'
 
@@ -11,7 +11,7 @@ const HomeScreen = ({ navigation }) => {
   // highly customizable 
   const CustomButton = ({ onPress, title }) => 
     <TouchableOpacity onPress={onPress}>
-      <View style={[STYLES.center, styles.touchableOpacity]}>
+      <View style={[STYLES.center, styles.customButton]}>
         <Text style={styles.text}>{title}</Text>
       </View>
     </TouchableOpacity>
@@ -20,7 +20,7 @@ const HomeScreen = ({ navigation }) => {
   const button = <Button title="components demo" onPress={() => navigation.push('Components')} />
  
   content = (
-    <View style={STYLES.centered}>
+    <SafeAreaView style={styles.content}>
       <CustomButton title="box object" onPress={() => navigation.push('Box')} />
       <CustomButton title="colors demo" onPress={() => navigation.push('Color')} />
       <CustomButton title="component demo" onPress={() => navigation.push('Components')} />
@@ -29,18 +29,23 @@ const HomeScreen = ({ navigation }) => {
       <CustomButton title="list demo" onPress={() => navigation.push('List')} />
       <CustomButton title="square demo" onPress={() => navigation.push('Square')} />
       <CustomButton title="text input" onPress={() => navigation.push('Text')} />
-    </View>
+    </SafeAreaView>
   )
 
   return content  
 } 
 
 const styles = StyleSheet.create({
-  touchableOpacity: {
-    margin: 10,
-    height: 60, 
+  content: {
+    flex: 1,
+    alignItems: 'center', 
+    justifyContent: 'space-around'
+
+  }, 
+  customButton: {
+    height: 50, 
     width: 300, 
-    borderRadius: 30, 
+    borderRadius: 25, 
     backgroundColor: COLORS.oceanBlueBlue
   }, 
   text: {
