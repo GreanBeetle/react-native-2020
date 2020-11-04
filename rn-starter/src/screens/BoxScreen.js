@@ -40,6 +40,16 @@ const BoxScreen = () => {
         <Text style={styles.textAbsoluteFillObject}>Child #2</Text>
         <Text style={styles.text}>Child #3</Text>
       </View>
+      <View style={styles.boxWrapper}>
+        <View style={[styles.box, {backgroundColor: COLORS.antarcticAqua}]} />
+        <View style={[styles.box, { backgroundColor: COLORS.oceanBlueAqua, top: 90}]} />
+        <View style={[styles.box, { backgroundColor: COLORS.accentAqua}]} />
+      </View>
+      <View style={styles.boxWrapperTwo}>
+        <View style={[styles.boxTwo, {backgroundColor: COLORS.accentMint}]} />
+        <View style={[styles.boxTwo, {backgroundColor: COLORS.oceanBlueBlue, right: 130}]} />
+        <View style={[styles.boxTwo, {backgroundColor: COLORS.purpleLovePurple, right: 0}]} />
+      </View>
     </ScrollView>
   )
 }
@@ -185,6 +195,33 @@ const styles = StyleSheet.create({
     borderColor: COLORS.red,
     color: COLORS.red
   }, 
+
+  // styles for the assignment
+  boxWrapper: {
+    height: 180, 
+    borderWidth: 1, 
+    borderColor: COLORS.borderGray,
+    margin: 20,
+    flexDirection: 'row', 
+    justifyContent: 'space-between'
+  }, 
+  box: {
+    height: 90,
+    width: 90
+  }, 
+  boxWrapperTwo: {
+    height: 180,
+    width: 350,
+    borderWidth: 1,
+    borderColor: COLORS.borderGray,
+    flexDirection: 'row',
+    alignSelf: 'center'
+  },
+  boxTwo: {
+    height: 90,
+    width: 90, 
+    position: 'absolute'
+  }
 })
 
 export default BoxScreen
