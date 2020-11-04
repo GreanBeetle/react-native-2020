@@ -21,7 +21,7 @@ const HomeScreen = ({ navigation }) => {
  
   content = (
     <SafeAreaView style={styles.content}>
-      <CustomButton title="box object" onPress={() => navigation.push('Box')} />
+      <CustomButton title="box" onPress={() => navigation.push('Box')} />
       <CustomButton title="colors demo" onPress={() => navigation.push('Color')} />
       <CustomButton title="component demo" onPress={() => navigation.push('Components')} />
       <CustomButton title="counter demo" onPress={() => navigation.push('Counter')} />

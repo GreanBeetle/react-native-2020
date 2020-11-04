@@ -1,10 +1,8 @@
 import React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
-import STYLES from '../styles'
 import COLORS from '../colors'
 
 const BoxScreen = () => {
-  console.log('styles', styles) // remove
   return (
     <View>
       <View style={styles.viewStyle}>
@@ -12,9 +10,9 @@ const BoxScreen = () => {
         <Text style={styles.textOne}>Child #2</Text>
         <Text style={styles.textOne}>Child #3</Text>
       </View>
-      <View style={styles.viewTwo}>
+      <View style={styles.viewAbsolute}>
         <Text style={styles.textOne}>Child #1</Text>
-        <Text style={styles.textOne}>Child #2</Text>
+        <Text style={styles.textAbsolute}>Child #2</Text>
         <Text style={styles.textOne}>Child #3</Text>
       </View>
       <View style={styles.viewThree}>
@@ -26,6 +24,16 @@ const BoxScreen = () => {
         <Text style={styles.textOne}>Child #1</Text>
         <Text style={styles.textTwo}>Child #2</Text>
         <Text style={styles.textThree}>Child #3</Text>
+      </View>
+      <View style={styles.viewFive}>
+        <Text style={styles.textFive}>Child #1</Text>
+        <Text style={styles.textFour}>Child #2</Text>
+        <Text style={styles.textFive}>Child #3</Text>
+      </View>
+      <View style={styles.viewTopBottomLeftRight}>
+        <Text style={styles.textFive}>Child #1</Text>
+        <Text style={styles.textTopBottomLeftRight}>Child #2</Text>
+        <Text style={styles.textFive}>Child #3</Text>
       </View>
     </View>
   )
@@ -48,27 +56,61 @@ const BoxScreen = () => {
                 v
       <----- justifyContent ----->
   </Parent>
+
+  notes on "position: absolute" 
+  position: 'relative' is the default, it means do things as usual  
+  postion: 'absolute' means "ignore and be ignored by sibling elements"
+  however 'absolute' will still obey some of the parents' flex-box rules
+  in the textAbsolute example, note that 
+  textAbsolute ignores the parent rule alignItems: 'stretch'! 
+  however textAbsolute would still obey alignItems: 'center'
+  
+  notes on "top" and "bottom" and "left" and "right" 
+  these properties execute AFTER everything else 
+  they are similar to margin except they ignore both sibling and parent elements
+
 */
 const styles = StyleSheet.create({
-  viewStyle: {
-    alignItems: 'flex-start', // default is "stretch" i.e. take up as much space as possible
-    flexDirection: 'row',   // child elements in rows or colums, default is column
+  // styling for the postion: 'absolute' examples 
+  viewAbsolute: {
+    alignItems: 'stretch',
+    borderWidth: 3,
+    borderColor: COLORS.black,
+    margin: 10,
+  },
+  textAbsolute: { 
+    borderWidth: 1,
+    borderColor: COLORS.red,
+    position: 'absolute', // ignores its siblings! but may still position self relative to parent based on some parent property 
+    fontSize: 24
+  },
+  
+  // styling for top, bottom, left, right examples 
+  viewTopBottomLeftRight: {
     height: 100,
     borderWidth: 3,
     borderColor: COLORS.black,
     margin: 10,
   },
-  viewTwo: {
-    alignItems: 'flex-end', 
-    flexDirection: 'row', 
-    height: 100,
+  textTopBottomLeftRight: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: COLORS.actionGreen,
+    color: COLORS.actionGreen,
+    left: 25 // top, bottom, left, and right execute AFTER everything else and ignore both sibling and parent elements 
+  }, 
+
+  // styling for flexbox, box-object examples  
+  viewStyle: {
+    alignItems: 'flex-start', // default is "stretch" i.e. take up as much space as possible
+    flexDirection: 'row',   // child elements in rows or colums, default is column
     borderWidth: 3,
     borderColor: COLORS.black,
     margin: 10,
   },
   viewThree: { // default flexDirection 'column'
-    justifyContent: 'space-around', // centers children vertically if direction 'column', horizontally if 'row'
     alignItems: 'center', 
+    justifyContent: 'space-around', // centers children vertically if direction 'column', horizontally if 'row'
     height: 100,
     borderWidth: 3,
     borderColor: COLORS.black,
@@ -81,12 +123,19 @@ const styles = StyleSheet.create({
     borderColor: COLORS.black,
     margin: 10,
   },
+  viewFive: {
+    alignItems: 'center', 
+    height: 100,
+    borderWidth: 3,
+    borderColor: COLORS.black,
+    margin: 10,
+  }, 
   textOne: {
     borderWidth: 1, 
     borderColor: COLORS.red, 
-  }, 
+  },  
   textTwo: {
-    flex: 2, 
+    flex: 2, // flex is how much space to take up relative to other child elements
     borderWidth: 1,
     borderColor: COLORS.red,
   }, 
@@ -94,7 +143,19 @@ const styles = StyleSheet.create({
     flex: 4, 
     borderWidth: 1,
     borderColor: COLORS.red,
-  }
+  },
+  textFour: {
+    flex: 1,
+    alignSelf: 'flex-end', // override alignItems on parent element 
+    borderWidth: 1,
+    borderColor: COLORS.red, 
+  },  
+  textFive: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: COLORS.red,
+    color: COLORS.red
+  }, 
 })
 
 export default BoxScreen
