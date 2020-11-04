@@ -47,7 +47,7 @@ const BoxScreen = () => {
       </View>
       <View style={styles.boxWrapperTwo}>
         <View style={[styles.boxTwo, {backgroundColor: COLORS.accentMint}]} />
-        <View style={[styles.boxTwo, {backgroundColor: COLORS.oceanBlueBlue, right: 130}]} />
+        <View style={[styles.boxTwo, {backgroundColor: COLORS.oceanBlueBlue, right: 130, alignSelf: 'flex-end'}]} />
         <View style={[styles.boxTwo, {backgroundColor: COLORS.purpleLovePurple, right: 0}]} />
       </View>
     </ScrollView>
