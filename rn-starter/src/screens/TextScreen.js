@@ -15,9 +15,9 @@ const TextScreen = () => {
       <Text>Enter name</Text>
       <TextInput 
         style={styles.input}
-        autoCapitalize="none"                   // ALWAYS use this prop 
-        autoCorrect={false}                     // ALWAYS use this prop 
-        onChangeText={ text => setName(text) }  // ALWAYS  
+        autoCapitalize="none"  // ALWAYS use this prop 
+        autoCorrect={false}    // ALWAYS use this prop 
+        onChangeText={ text => setName(text) }  
         value={name}/>
       <Text>
         {name.length < 5 ? ERROR_MESSAGE : name}
@@ -32,14 +32,14 @@ const styles = StyleSheet.create({
     paddingTop: 40
   },
   input: {
-  margin: 15,
-  borderColor: COLORS.antarcticPurple,
-  borderWidth: 1,
-  borderRadius: 30,
-  height: 60,
-  width: WIDTH - 40,
-  color: COLORS.antarcticAqua,
-  paddingHorizontal: 20
+    margin: 15,
+    borderColor: COLORS.antarcticPurple,
+    borderWidth: 1,
+    borderRadius: 30,
+    height: 60,
+    width: WIDTH - 40,
+    color: COLORS.antarcticAqua,
+    paddingHorizontal: 20
  } 
 })
 
