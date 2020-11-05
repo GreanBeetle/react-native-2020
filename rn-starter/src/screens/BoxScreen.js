@@ -75,15 +75,14 @@ const BoxScreen = () => {
   notes on "position: absolute" 
   position: 'relative' is the default, it means do things as usual  
   postion: 'absolute' means "ignore and be ignored by sibling elements"
-  however 'absolute' will still obey some of the parents' flex-box rules
+  however 'absolute' will still obey some of the parent's flex-box rules
   in the textAbsolute example, note that 
-  textAbsolute ignores the parent rule alignItems: 'stretch'! 
+  textAbsolute ignores the parent rule alignItems: 'stretch' 
   however textAbsolute would still obey alignItems: 'center'
   
   notes on "top" and "bottom" and "left" and "right" 
   these properties execute AFTER everything else 
   they are similar to margin except they ignore both sibling and parent elements
-
 */
 const styles = StyleSheet.create({
   // styling for the postion: 'absolute' examples 
