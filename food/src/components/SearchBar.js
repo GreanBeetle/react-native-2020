@@ -5,16 +5,21 @@ import {
   StyleSheet 
 } from 'react-native' 
 import { Feather } from '@expo/vector-icons'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
 import STYLES from '../styles'
 import COLORS from '../colors'
 import COPY from '../copy'
 
-const SearchBar = () => {
+const SearchBar = ({ term, onTermChange }) => {
   return (
     <View style={styles.backgroundStyle}>
       <Feather name="search" style={styles.iconStyle} />
-      <TextInput placeholder={COPY.search} style={styles.inputStyle} />
+      <TextInput 
+        autoCapitalize="none" // ALWAYS add this prop   
+        autoCorrect={false}   // ALWAYS add this prop 
+        onChangeText={newValue => onTermChange(newValue)}
+        placeholder={COPY.search} 
+        style={styles.inputStyle}
+        value={term}/>
     </View>
   )
 }
