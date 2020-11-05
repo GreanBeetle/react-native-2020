@@ -10,39 +10,40 @@
 ![JavaScript](https://img.shields.io/static/v1?message=JavaScript&color=F7DF1E&style=plastic&logo=javascript&label=&labelColor=36566F&logoColor=F7DF1E)
 ![Redux](https://img.shields.io/static/v1?message=Redux&color=764ABC&style=plastic&logo=redux&label=&labelColor=36566F&logoColor=764ABC)
 
-This is a master repository for a collection of small to medium-sized React Native applications. Each app was (or will be) built for one of Steven Grider's courses. Specifically, his ["The Complete React Native + Hooks Course [2020 Edition]"](https://www.udemy.com/course/the-complete-react-native-and-redux-course/). 
+This is a master repository for a collection of small to medium-sized React Native applications. Each app was (or will be) built for Steven Grider's course, ["The Complete React Native + Hooks Course [2020 Edition]"](https://www.udemy.com/course/the-complete-react-native-and-redux-course/). [Course repo is here.](https://github.com/StephenGrider/rn-casts)
 
-[The official repository for the entire course is here.](https://github.com/StephenGrider/rn-casts)
+The goal is to stay on top of the latest React Native trends, components, libraries, features, and best practices. The topics coverd in these apps are:  
 
-The goal here is to simply stay on top of the latest React Native features and best practices, even though much of this is recap. Among other things, the various apps in this repo delve into:   
+_TO DO: Add a list of applications included in this repository. So far there are two applications. (a) rn-starter, which covers a lot of basic stuff and (b) food app, which delves into more interesting territory such as Context, building an Express API, and managing In-App Authentication flows._ 
  
 * React Navigation 5
+* Authentication Flows
 * Redux, Actions, Reducers
 * "Gotchas" regarding State 
-* _Not_ mutating state 
-* Layout, Flex, Absolute Fill Objects, Box Object Model 
+* Layout, Flex, Absolute Fill Objects, etc.  
 * 3rd-party APIs
 * Hooks, reusable and otherwise
 * Constraining views 
-* "WithNavigation" helper
 * Context, Advanced State Management
 * Moving data with Context 
 * Data API Sync
 * Building a custom Express API with MongoDB 
 * Understanding the signup flow/process
-* Defining User Schema
+* Defining Schemas 
 * JSON Web Tokens, creating a JWT, wiring up JWTs
 * Password hashing, salting and hashing
 * Auth Context
 * React Native Maps 
 * UseCallback hook
 * Coordination between Contexts
-* _Rendering lists the right way_
+* _Rendering lists the right way!_
 * Authentication with Firebase
 * Processing authentication credentials
 * And more ... 
 
 ## Index
+
+_TO DO: organize the index using bullet points and sub bullet points. Remove unnecessary -> syntax._ 
 
 * `action` -> `rn-starter` -> `SquareScreen.js` and `CounterScreen`
 * `FlatList` -> `rn-starter` -> `ColorScreen.js`
@@ -51,6 +52,7 @@ The goal here is to simply stay on top of the latest React Native features and b
 * Layout: Flex Box -> `rn-starter` -> `BoxScreen.js`
 * Layout: `position: 'absolute'` -> `rn-starter` -> `BoxScreen.js` 
 * Layout: `top`, `bottom`, `left`, `right` -> `rn-starter` -> `BoxScreen`
+* Navigation: `react-navigation` -> `food` -> `navigation.js` 
 * `props` -> `rn-starter` -> `ImageScreen`  
 * `reducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen
 * reusable components -> `rn-starter` -> `ImageDetail`
