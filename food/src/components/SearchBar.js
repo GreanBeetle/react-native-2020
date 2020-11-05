@@ -9,7 +9,7 @@ import STYLES from '../styles'
 import COLORS from '../colors'
 import COPY from '../copy'
 
-const SearchBar = ({ term, onTermChange }) => {
+const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
   return (
     <View style={styles.backgroundStyle}>
       <Feather name="search" style={styles.iconStyle} />
@@ -17,6 +17,7 @@ const SearchBar = ({ term, onTermChange }) => {
         autoCapitalize="none" // ALWAYS add this prop   
         autoCorrect={false}   // ALWAYS add this prop 
         onChangeText={newValue => onTermChange(newValue)}
+        onEndEditing={() => onTermSubmit()}
         placeholder={COPY.search} 
         style={styles.inputStyle}
         value={term}/>
