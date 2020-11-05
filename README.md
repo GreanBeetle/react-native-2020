@@ -57,9 +57,9 @@ _TO DO: organize the index using bullet points and sub bullet points. Remove unn
 * `props` -> `rn-starter` -> `ImageScreen`  
 * `reducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen
 * reusable components -> `rn-starter` -> `ImageDetail`
-* `TextInput` -> `rn-starter` -> `TextScreen` 
+* `TextInput` -> `rn-starter/TextScreen`  and `food/SearchBar + food/SearchScreen`
 * `useReducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen`
-* `useState` -> `rn-starter` -> `CounterScreenCopy` and `ColorScreen`
+* `useState` -> `rn-starter/CounterScreenCopy` and `rn-starter/ColorScreen` and `food/SearchScreen`
 
 ### Author
 
