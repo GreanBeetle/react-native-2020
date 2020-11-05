@@ -48,6 +48,7 @@ _TO DO: organize the index using bullet points and sub bullet points. Remove unn
 * `action` -> `rn-starter` -> `SquareScreen.js` and `CounterScreen`
 * `FlatList` -> `rn-starter` -> `ColorScreen.js`
 * `FlatList` -> `rn-starter` -> `ListScreen.js`
+* Icons -> `food` -> `SearchBar.js`
 * Layout: Absolute Fill Objects -> `rn-starter` -> `BoxScreen` (cool stuff!) 
 * Layout: Flex Box -> `rn-starter` -> `BoxScreen.js`
 * Layout: `position: 'absolute'` -> `rn-starter` -> `BoxScreen.js` 

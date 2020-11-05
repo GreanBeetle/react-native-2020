@@ -1,7 +1,12 @@
 # rn-starter 
 ##### October 30, 2020 
 
-This app illustrates different options and best practices when implementing many of the most basic and common react native features. 
+This app illustrates different options and best practices when implementing the most basic and common react native features. 
+
+### To build
+
+* `npm install` 
+* `expo start`
 
 ### Author
 

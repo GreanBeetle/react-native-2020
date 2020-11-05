@@ -3,6 +3,11 @@
 
 ## W.I.P.  
 
+### To build
+
+* `npm install` 
+* `expo start`
+
 ### Author
 
 John Rykken
