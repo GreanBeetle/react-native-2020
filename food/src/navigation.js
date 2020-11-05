@@ -2,15 +2,15 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import {
-  HomeScreen,
+  SearchScreen,
   TestScreen
 } from './screens'
 
 const Stack = createStackNavigator()
 
 const StackScreens = () => (
-  <Stack.Navigator initialRouteName="Home">
-    <Stack.Screen name="Home" component={HomeScreen} />
+  <Stack.Navigator initialRouteName="Search">
+    <Stack.Screen name="Search" component={SearchScreen} /> 
     <Stack.Screen name="Test" component={TestScreen} />
   </Stack.Navigator>
 )

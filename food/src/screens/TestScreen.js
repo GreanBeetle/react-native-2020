@@ -6,7 +6,7 @@ const TestScreen = ({ navigation }) => {
   return (
     <View style={STYLES.centered}>
       <Text>Test Screen </Text>
-      <Button title="home" onPress={() => navigation.pop()} />
+      <Button title="Search" onPress={() => navigation.pop()} />
     </View>
   )
 }

@@ -1,7 +1,7 @@
-import HomeScreen from './HomeScreen'
+import SearchScreen from './SearchScreen'
 import TestScreen from './TestScreen'
 
 export {
-  HomeScreen,
+  SearchScreen,
   TestScreen
 }

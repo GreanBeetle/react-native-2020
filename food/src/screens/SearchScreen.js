@@ -2,10 +2,10 @@ import React from 'react'
 import { Text, View, StyleSheet, Button } from 'react-native'
 import STYLES from '../styles'
 
-const HomeScreen = ({ navigation }) => {
+const SearchScreen = ({ navigation }) => {
   return (
     <View style={STYLES.centered}>
-      <Text>HomeScreen</Text>
+      <Text>SearchScreen</Text>
       <Button title="test" onPress={() => navigation.push('Test')} />
     </View>
   )
@@ -13,4 +13,4 @@ const HomeScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({})
 
-export default HomeScreen
+export default SearchScreen
