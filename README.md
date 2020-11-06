@@ -46,6 +46,7 @@ _TO DO: Add a list of applications included in this repository. So far there are
 _TO DO: organize the index using bullet points and sub bullet points. Remove unnecessary -> syntax._ 
 
 * `action` -> `rn-starter` -> `SquareScreen.js` and `CounterScreen`
+* Axios (fetch alernative) -> `food/api/yelp` and `food/SearchScreen`
 * `FlatList` -> `rn-starter` -> `ColorScreen.js`
 * `FlatList` -> `rn-starter` -> `ListScreen.js`
 * Icons -> `food` -> `SearchBar.js`
