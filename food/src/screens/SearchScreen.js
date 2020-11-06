@@ -1,21 +1,40 @@
 import React, { useState } from 'react'
 import { Text, SafeAreaView, StyleSheet, Button } from 'react-native'
 import { SearchBar } from '../components'
-import STYLES from '../styles' // no unused styles
+import yelp from '../api/yelp'
+
 
 const SearchScreen = ({ navigation }) => {
   const [term, setTerm] = useState('')
+  const [results, setResults] = useState([])
 
-  const onTermSubmit = () => console.log(`searching ${term}!`)
+  const searchAPI = async () => {
+    try {
+      console.log(`searching for ${term}`) // REMOVE
+      const response = await yelp.get(`/search`, {
+        params: {
+          limit: 50,
+          term: term, 
+          latitude: 45.5051,    // Portland 
+          longitude: -122.6750  // Portland 
+        }
+      })
+      console.log('response data businesses', response.data.businesses)
+      setResults(response.data.businesses)
+    } catch (error) {
+      console.log('search API error', error)
+    }
+  } 
   
   return (
     <SafeAreaView>
       <SearchBar 
         onTermChange={newTerm => setTerm(newTerm)}
-        onTermSubmit={() => onTermSubmit()} 
+        onTermSubmit={() => searchAPI()} 
         term={term} />
       <Text>SearchScreen</Text>
       <Text>{term}</Text>
+      <Text>{results.length} results!</Text>
       <Button title="test" onPress={() => navigation.push('Test')} />
     </SafeAreaView>
   )
