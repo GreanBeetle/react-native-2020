@@ -24,3 +24,4 @@ const SearchScreen = ({ navigation }) => {
 const styles = StyleSheet.create({})
 
 export default SearchScreen
+

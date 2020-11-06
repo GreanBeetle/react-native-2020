@@ -16,8 +16,8 @@ const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
       <TextInput 
         autoCapitalize="none" // ALWAYS add this prop   
         autoCorrect={false}   // ALWAYS add this prop 
-        onChangeText={onTermChange} // reference the prop without ()
-        onEndEditing={onTermSubmit} // reference the prop without ()
+        onChangeText={onTermChange} // reference prop without ()
+        onEndEditing={onTermSubmit} // reference prop without ()
         placeholder={COPY.search} 
         style={styles.inputStyle}
         value={term}/>
