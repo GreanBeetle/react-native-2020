@@ -10,16 +10,14 @@ const SearchScreen = ({ navigation }) => {
 
   const searchAPI = async () => {
     try {
-      console.log(`searching for ${term}`) // REMOVE
       const response = await yelp.get(`/search`, {
         params: {
           limit: 50,
           term: term, 
-          latitude: 45.5051,    // Portland 
-          longitude: -122.6750  // Portland 
+          latitude: 45.5051,     
+          longitude: -122.6750   
         }
       })
-      console.log('response data businesses', response.data.businesses)
       setResults(response.data.businesses)
     } catch (error) {
       console.log('search API error', error)
