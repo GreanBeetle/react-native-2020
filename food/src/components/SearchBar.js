@@ -5,7 +5,6 @@ import {
   StyleSheet 
 } from 'react-native' 
 import { Feather } from '@expo/vector-icons'
-import STYLES from '../styles' // no unused vars
 import COLORS from '../colors'
 import COPY from '../copy'
 

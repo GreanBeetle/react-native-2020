@@ -50,10 +50,14 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * Axios (fetch alernative) -> `food/api/yelp` and `food/SearchScreen`
 * error handling -> `food/SearchScreen/` -> `searchAPI()`
 * `FlatList` -> `rn-starter` -> `ColorScreen.js`
-* `FlatList` -> `rn-starter` -> `ListScreen.js`
+  * basics -> `rn-starter/ColorScreen` and `rn-starter/ListScreen`
+  * optimizing -> 
+  * rendering -> 
 * Hooks
+  * reusing hooks -> `food/hooks/useResults.js`
+  * `useEffect` -> `food/hooks/useResults` // OKAY?  
   * `useReducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen`
-  * `useState` -> `rn-starter/CounterScreenCopy` and `rn-starter/ColorScreen` and `food/SearchScreen`
+  * `useState` -> `rn-starter/CounterScreenCopy` and `rn-starter/ColorScreen`
 * Icons -> `food` -> `SearchBar.js`
 * Layout: Absolute Fill Objects -> `rn-starter` -> `BoxScreen` (cool stuff!) 
 * Layout: Flex Box -> `rn-starter` -> `BoxScreen.js`
