@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import { Text, SafeAreaView, StyleSheet, Button } from 'react-native'
 import { SearchBar } from '../components'
 import yelp from '../api/yelp'
+import COPY from '../copy'
 
 
 const SearchScreen = ({ navigation }) => {
   const [term, setTerm] = useState('')
   const [results, setResults] = useState([])
+  const [errorMessage, setErrorMessage] = useState('')
 
   const searchAPI = async () => {
     try {
@@ -20,7 +22,7 @@ const SearchScreen = ({ navigation }) => {
       })
       setResults(response.data.businesses)
     } catch (error) {
-      console.log('search API error', error)
+      setErrorMessage(COPY.errorMessage + error.message)
     }
   } 
   
@@ -30,8 +32,7 @@ const SearchScreen = ({ navigation }) => {
         onTermChange={newTerm => setTerm(newTerm)}
         onTermSubmit={() => searchAPI()} 
         term={term} />
-      <Text>SearchScreen</Text>
-      <Text>{term}</Text>
+      {errorMessage ? <Text>{errorMessage}</Text> : null}
       <Text>{results.length} results!</Text>
       <Button title="test" onPress={() => navigation.push('Test')} />
     </SafeAreaView>
