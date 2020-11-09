@@ -43,13 +43,17 @@ _TO DO: Add a list of applications included in this repository. So far there are
 
 ## Index
 
-_TO DO: refactor and reorganize using bullet points and sub bullet points. Decide which topics should be included._
+_TO DO: refactor and reorganize using bullet points and sub bullet points. Decide which topics should be included. Decide how and which particular topics ought to be cross-referenced._
 
 * `action` -> `rn-starter` -> `SquareScreen.js` and `CounterScreen`
 * API -> Yelp - `food/api/yelp` and `SearchScreen` and `SearchBar`
 * Axios (fetch alernative) -> `food/api/yelp` and `food/SearchScreen`
+* error handling -> `food/SearchScreen/` -> `searchAPI()`
 * `FlatList` -> `rn-starter` -> `ColorScreen.js`
 * `FlatList` -> `rn-starter` -> `ListScreen.js`
+* Hooks
+  * `useReducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen`
+  * `useState` -> `rn-starter/CounterScreenCopy` and `rn-starter/ColorScreen` and `food/SearchScreen`
 * Icons -> `food` -> `SearchBar.js`
 * Layout: Absolute Fill Objects -> `rn-starter` -> `BoxScreen` (cool stuff!) 
 * Layout: Flex Box -> `rn-starter` -> `BoxScreen.js`
@@ -60,8 +64,7 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * `reducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen
 * reusable components -> `rn-starter` -> `ImageDetail`
 * `TextInput` -> `rn-starter/TextScreen`  and `food/SearchBar + food/SearchScreen`
-* `useReducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen`
-* `useState` -> `rn-starter/CounterScreenCopy` and `rn-starter/ColorScreen` and `food/SearchScreen`
+
 
 ### Author
 
