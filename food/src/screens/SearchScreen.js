@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Text, SafeAreaView, StyleSheet, Button } from 'react-native'
-import { SearchBar } from '../components'
+import { ResultsList, SearchBar } from '../components'
 import useResults from '../hooks/useResults'
 
 const SearchScreen = ({ navigation }) => {
@@ -16,6 +16,9 @@ const SearchScreen = ({ navigation }) => {
       {errorMessage ? <Text>{errorMessage}</Text> : null}
       <Text>{results.length} results!</Text>
       <Button title="test" onPress={() => navigation.push('Test')} />
+      <ResultsList />
+      <ResultsList />
+      <ResultsList />
     </SafeAreaView>
   )
 }

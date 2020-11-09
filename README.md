@@ -12,7 +12,7 @@
 
 This is a master repository for a collection of small to medium-sized React Native applications. Each app was (or will be) built for Steven Grider's course, ["The Complete React Native + Hooks Course [2020 Edition]"](https://www.udemy.com/course/the-complete-react-native-and-redux-course/). [Course repo is here.](https://github.com/StephenGrider/rn-casts)
 
-The goal is to stay on top of the latest React Native trends, components, libraries, features, and best practices. The topics coverd in these apps are:  
+The goal is to stay on top of the latest React Native trends, components, libraries, features, and best practices. The topics covered in these apps are:  
 
 _TO DO: Add a list of applications included in this repository. So far there are (a) rn-starter, which covers basics, and (b) food, which delves into interesting territory such as Context, building an Express API, and managing In-App Authentication flows._ 
  
@@ -49,25 +49,28 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * API -> Yelp - `food/api/yelp` and `SearchScreen` and `SearchBar`
 * Axios (fetch alernative) -> `food/api/yelp` and `food/SearchScreen`
 * error handling -> `food/SearchScreen/` -> `searchAPI()`
-* `FlatList` -> `rn-starter` -> `ColorScreen.js`
+* `<FlatList />`
   * basics -> `rn-starter/ColorScreen` and `rn-starter/ListScreen`
   * optimizing -> 
   * rendering -> 
 * Hooks
-  * reusing hooks -> `food/hooks/useResults.js`
-  * `useEffect` -> `food/hooks/useResults` // OKAY?  
+  * extracting hook logic -> `food/hooks/useResults.js` and `food/SearchScreen`
+  * `useEffect` -> `food/hooks/useResults` 
   * `useReducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen`
   * `useState` -> `rn-starter/CounterScreenCopy` and `rn-starter/ColorScreen`
 * Icons -> `food` -> `SearchBar.js`
-* Layout: Absolute Fill Objects -> `rn-starter` -> `BoxScreen` (cool stuff!) 
-* Layout: Flex Box -> `rn-starter` -> `BoxScreen.js`
-* Layout: `position: 'absolute'` -> `rn-starter` -> `BoxScreen.js` 
-* Layout: `top`, `bottom`, `left`, `right` -> `rn-starter` -> `BoxScreen`
-* Navigation: `react-navigation` -> `food` -> `navigation.js` 
-* `props` -> `rn-starter` -> `ImageScreen`  
-* `reducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen
-* reusable components -> `rn-starter` -> `ImageDetail`
-* `TextInput` -> `rn-starter/TextScreen`  and `food/SearchBar + food/SearchScreen`
+* Layout
+  * Absolute Fill Objects -> `rn-starter` -> `BoxScreen` (cool stuff!) 
+  * Flex Box -> `rn-starter` -> `BoxScreen.js`
+  * `position: 'absolute'` -> `rn-starter/BoxScreen.js` 
+  * `top`, `bottom`, `left`, `right` -> `rn-starter/BoxScreen`
+* Navigation: `react-navigation` -> `food/navigation.js` 
+* `props` -> `rn-starter/ImageScreen`  
+* `reducer` -> `rn-starter/SquareScreen` and `CounterScreen
+* reusable components
+  * `rn-starter/ImageDetail`
+  * `food/components/ResultsList`
+* `<TextInput />` -> `rn-starter/TextScreen`  and `food/SearchBar` and `food/SearchScreen`
 
 
 ### Author
