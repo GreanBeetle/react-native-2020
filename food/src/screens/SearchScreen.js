@@ -20,7 +20,7 @@ const SearchScreen = ({ navigation }) => {
         onTermSubmit={() => searchAPI(term)} 
         term={term} />
       {errorMessage ? <Text>{errorMessage}</Text> : null}
-      <Text>{results.length} results!</Text>
+      <Text style={styles.textStyle}>{results.length} results!</Text>
       <ResultsList results={filterResultsByPrice('$')} title={COPY.budget} />
       <ResultsList results={filterResultsByPrice('$$')} title={COPY.costEffective} />
       <ResultsList results={filterResultsByPrice('$$$')} title={COPY.pricey} />
@@ -29,7 +29,11 @@ const SearchScreen = ({ navigation }) => {
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  textStyle: {
+    margin: 10
+  }
+})
 
 export default SearchScreen
 

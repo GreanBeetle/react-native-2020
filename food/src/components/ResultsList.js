@@ -11,7 +11,7 @@ const ResultsList = ({ results, title }) => {
         horizontal
         showsHorizontalScrollIndicator={false}
         data={results}
-        renderItem={({item}) => <ResultDetail item={item} />}
+        renderItem={({item}) => <ResultDetail result={item} />}
         keyExtractor={item => item.id} />
     </View>
   )
@@ -20,7 +20,8 @@ const ResultsList = ({ results, title }) => {
 const styles = StyleSheet.create({
   title: {
     fontSize: 20,
-    fontWeight: 'bold'
+    fontWeight: 'bold', 
+    marginLeft: 10
   }
 })
 

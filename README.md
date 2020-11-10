@@ -54,7 +54,7 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * optimizing -> 
   * rendering -> `food/ResultsList`
   * renderItem ->
-  * styles ->  
+  * styles -> `food/ResultDetail` REMOVE?
 * Hooks
   * extracting hook logic -> `food/hooks/useResults.js` and `food/SearchScreen`
   * `useEffect` -> `food/hooks/useResults` 
@@ -63,7 +63,7 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * Icons -> `food` -> `SearchBar.js`
 * `<Image />`
   * `rn-starter/ImageScreen`
-  * `food/ResultsLists`
+  * `food/ResultDetail` 
 * Layout
   * Absolute Fill Objects -> `rn-starter` -> `BoxScreen` (cool stuff!) 
   * Flex Box -> `rn-starter` -> `BoxScreen.js`
