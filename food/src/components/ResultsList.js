@@ -1,5 +1,6 @@
 import React from 'react'
 import { FlatList, View, Text, StyleSheet } from 'react-native'
+import { ResultDetail } from './index'
 
 const ResultsList = ({ results, title }) => {
   console.log('results', results) // REMOVE 
@@ -10,7 +11,7 @@ const ResultsList = ({ results, title }) => {
         horizontal
         showsHorizontalScrollIndicator={false}
         data={results}
-        renderItem={ ({item}) => <Text>Name: {item.name} Price: {item.price}</Text> }
+        renderItem={({item}) => <ResultDetail item={item} />}
         keyExtractor={item => item.id} />
     </View>
   )
