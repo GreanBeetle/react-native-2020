@@ -3,13 +3,12 @@ import { FlatList, View, Text, StyleSheet } from 'react-native'
 import { ResultDetail } from './index'
 
 const ResultsList = ({ results, title }) => {
-  console.log('results', results) // REMOVE 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
       <FlatList 
         horizontal
-        showsHorizontalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false} // always remove scroll bar
         data={results}
         renderItem={({item}) => <ResultDetail result={item} />}
         keyExtractor={item => item.id} />
@@ -24,7 +23,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: 'bold', 
-    marginLeft: 15
+    marginLeft: 15,
+    marginBottom: 5
   }
 })
 

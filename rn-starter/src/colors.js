@@ -20,8 +20,7 @@ const COLORS = {
   oceanBlueBlue: '#2E3192',
   oceanBlueAqua: '#1BFFFF',
   antarcticPurple: '#D8B5FF', 
-  antarcticAqua: '#1EAE98' 
-
+  antarcticAqua: '#1EAE98', 
 }
 
 export default COLORS
