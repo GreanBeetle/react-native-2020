@@ -57,7 +57,8 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * Fragments `<> </>` -> `food/SearchScreen` 
 * Hooks
   * extracting hooks -> `food/hooks/useResults.js` and `food/SearchScreen`
-  * `useEffect` -> `food/hooks/useResults` 
+  * `useEffect` -> `food/hooks/useResults`
+  * `useNavigation` -> `food/ResultsList` (React Navigation 5) 
   * `useReducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen`
   * `useState` -> `rn-starter/CounterScreenCopy` and `rn-starter/ColorScreen`
 * Icons -> `food` -> `SearchBar.js`
@@ -70,7 +71,9 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * `position: 'absolute'` -> `rn-starter/BoxScreen.js` 
   * `top`, `bottom`, `left`, `right` -> `rn-starter/BoxScreen`
 * Navigation (React Navigation 5)
-  * `food/navigation` 
+  * basic architecture -> `food/navigation`
+  * params/passProps -> `food/ResultsList`
+  * `useNavigation` -> `food/ResultsList` (React Navigation 5)
 * `props` -> `rn-starter/ImageScreen`  
 * `reducer` -> `rn-starter/SquareScreen` and `CounterScreen
 * reusable components

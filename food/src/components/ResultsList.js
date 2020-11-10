@@ -1,8 +1,10 @@
 import React from 'react'
 import { FlatList, View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import { ResultDetail } from './index'
 
-const ResultsList = ({ results, title, navigation }) => {
+const ResultsList = ({ results, title }) => {
+  const navigation = useNavigation()
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
