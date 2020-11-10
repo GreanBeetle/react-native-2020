@@ -16,8 +16,8 @@
       <nine /> <ten /> <eleven /> <twelve />
       <thirten />
 
-  etc. this ^ is with 4 columns
-  2 columns would be
+  etc. this ^ is with 4 columns, i.e.  <FlatList numColumns={4} />
+  2 columns would be, i.e. <FlatList numColumns={2} />
 
       <one /> <two />
       <three /> <four />

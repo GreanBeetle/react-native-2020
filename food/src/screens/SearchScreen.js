@@ -8,6 +8,11 @@ const SearchScreen = ({ navigation }) => {
   const [term, setTerm] = useState('')
   const [searchAPI, results, errorMessage] = useResults()
 
+  /**
+   * @param {string} price '$' or '$$' or '$$$'
+   */
+  const filterResultsByPrice = price => results.filter( result => result.price === price)
+ 
   return (
     <SafeAreaView>
       <SearchBar 
@@ -16,10 +21,10 @@ const SearchScreen = ({ navigation }) => {
         term={term} />
       {errorMessage ? <Text>{errorMessage}</Text> : null}
       <Text>{results.length} results!</Text>
+      <ResultsList results={filterResultsByPrice('$')} title={COPY.budget} />
+      <ResultsList results={filterResultsByPrice('$$')} title={COPY.costEffective} />
+      <ResultsList results={filterResultsByPrice('$$$')} title={COPY.pricey} />
       <Button title="test" onPress={() => navigation.push('Test')} />
-      <ResultsList title={COPY.budget} />
-      <ResultsList title={COPY.costEffective} />
-      <ResultsList title={COPY.pricey} />
     </SafeAreaView>
   )
 }

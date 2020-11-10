@@ -43,7 +43,7 @@ _TO DO: Add a list of applications included in this repository. So far there are
 
 ## Index
 
-_TO DO: refactor and reorganize using bullet points and sub bullet points. Decide which topics should be included. Decide how and which particular topics ought to be cross-referenced._
+_TO DO: refactor and reorganize using bullet points and sub bullet points. Decide which topics should be included. Decide how and which particular topics ought to be cross-referenced. Add links._
 
 * `action` -> `rn-starter` -> `SquareScreen.js` and `CounterScreen`
 * API -> Yelp - `food/api/yelp` and `SearchScreen` and `SearchBar`
@@ -52,19 +52,22 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * `<FlatList />`
   * basics -> `rn-starter/ColorScreen` and `rn-starter/ListScreen`
   * optimizing -> 
-  * rendering -> 
+  * rendering -> `food/ResultsList`
 * Hooks
   * extracting hook logic -> `food/hooks/useResults.js` and `food/SearchScreen`
   * `useEffect` -> `food/hooks/useResults` 
   * `useReducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen`
   * `useState` -> `rn-starter/CounterScreenCopy` and `rn-starter/ColorScreen`
 * Icons -> `food` -> `SearchBar.js`
+* `<Image />`
+  * `rn-starter/ImageScreen`
 * Layout
   * Absolute Fill Objects -> `rn-starter` -> `BoxScreen` (cool stuff!) 
   * Flex Box -> `rn-starter` -> `BoxScreen.js`
   * `position: 'absolute'` -> `rn-starter/BoxScreen.js` 
   * `top`, `bottom`, `left`, `right` -> `rn-starter/BoxScreen`
-* Navigation: `react-navigation` -> `food/navigation.js` 
+* Navigation (React Navigation 5)
+  * `food/navigation` 
 * `props` -> `rn-starter/ImageScreen`  
 * `reducer` -> `rn-starter/SquareScreen` and `CounterScreen
 * reusable components
