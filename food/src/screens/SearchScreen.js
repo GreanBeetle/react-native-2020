@@ -4,7 +4,7 @@ import { ResultsList, SearchBar } from '../components'
 import useResults from '../hooks/useResults'
 import COPY from '../copy'
 
-const SearchScreen = ({ navigation }) => { // NO UNUSED VARS
+const SearchScreen = ({ navigation }) => { 
   const [term, setTerm] = useState('')
   const [searchAPI, results, errorMessage] = useResults()
 
@@ -36,9 +36,18 @@ const SearchScreen = ({ navigation }) => { // NO UNUSED VARS
         term={term} />
       {errorMessage ? <Text style={styles.textStyle}>{errorMessage}</Text> : null}
       <ScrollView>
-        <ResultsList results={filterResultsByPrice('$')} title={COPY.budget} />
-        <ResultsList results={filterResultsByPrice('$$')} title={COPY.costEffective} />
-        <ResultsList results={filterResultsByPrice('$$$')} title={COPY.pricey} />
+        <ResultsList 
+          results={filterResultsByPrice('$')} 
+          title={COPY.budget} 
+          navigation={navigation}/>
+        <ResultsList 
+          results={filterResultsByPrice('$$')} 
+          title={COPY.costEffective} 
+          navigation={navigation}/>
+        <ResultsList 
+          results={filterResultsByPrice('$$$')} 
+          title={COPY.pricey} 
+          navigation={navigation}/>
       </ScrollView>
     </>
   )
