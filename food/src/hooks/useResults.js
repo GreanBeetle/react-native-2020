@@ -24,7 +24,7 @@ export default () => {
   }
 
   useEffect(() => {
-    searchAPI('donuts')
+    searchAPI(COPY.initialSearch)
   }, [])
 
   return [searchAPI, results, errorMessage] // beautiful!  
