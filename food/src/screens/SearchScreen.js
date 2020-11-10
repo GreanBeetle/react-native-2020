@@ -35,7 +35,6 @@ const SearchScreen = ({ navigation }) => {
         onTermSubmit={() => searchAPI(term)} 
         term={term} />
       {errorMessage ? <Text style={styles.textStyle}>{errorMessage}</Text> : null}
-      <Text style={styles.textStyle}>{results.length} results!</Text>
       <ScrollView>
         <ResultsList results={filterResultsByPrice('$')} title={COPY.budget} />
         <ResultsList results={filterResultsByPrice('$$')} title={COPY.costEffective} />
