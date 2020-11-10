@@ -31,7 +31,7 @@ const SearchScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   textStyle: {
-    margin: 10
+    marginLeft: 15
   }
 })
 

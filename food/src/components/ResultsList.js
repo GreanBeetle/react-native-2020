@@ -5,7 +5,7 @@ import { ResultDetail } from './index'
 const ResultsList = ({ results, title }) => {
   console.log('results', results) // REMOVE 
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
       <FlatList 
         horizontal
@@ -18,10 +18,13 @@ const ResultsList = ({ results, title }) => {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    marginBottom: 10
+  }, 
   title: {
     fontSize: 20,
     fontWeight: 'bold', 
-    marginLeft: 10
+    marginLeft: 15
   }
 })
 
