@@ -3,13 +3,13 @@ import yelp from '../api/yelp'
 import COPY from '../copy'
 
 export default (id) => {
-  const [results, setResults] = useState('')
+  const [business, setBusiness] = useState(null)
   const [errorMessage, setErrorMessage] = useState('')
 
   const getBusinessAPI = async (ID) => {
     try {
-      const response = await yelp.get(`${ID}`)
-      setResults(response.data)
+      const response = await yelp.get(`/${ID}`)
+      setBusiness(response.data)
     } catch (error) {
       setErrorMessage(COPY.errorMessage + error.messsage)
     }
@@ -19,5 +19,5 @@ export default (id) => {
     getBusinessAPI(id)
   }, [])
 
-  return [results, errorMessage]
+  return [business, errorMessage]
 }

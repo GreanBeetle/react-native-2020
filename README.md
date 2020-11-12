@@ -52,7 +52,7 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * `<FlatList />`
   * basics -> `rn-starter/ColorScreen` and `rn-starter/ListScreen`
   * optimizing -> 
-  * rendering -> `food/ResultsList`
+  * rendering -> `food/ResultsList`, `food/BusinessScreen`
   * renderItem ->
 * Fragments `<> </>` -> `food/SearchScreen` 
 * Hooks
@@ -64,7 +64,8 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * Icons -> `food` -> `SearchBar.js`
 * `<Image />`
   * `rn-starter/ImageScreen`
-  * `food/ResultDetail` 
+  * `food/ResultDetail`
+  * `food/BusinessScreen` 
 * Layout
   * Absolute Fill Objects -> `rn-starter` -> `BoxScreen` (cool stuff!) 
   * Flex Box -> `rn-starter/BoxScreen.js`
