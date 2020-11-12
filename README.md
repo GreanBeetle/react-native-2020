@@ -14,7 +14,7 @@ This is a master repository for a collection of small to medium-sized React Nati
 
 The goal is to stay on top of the latest React Native trends, components, libraries, features, and best practices. The topics covered in these apps are:  
 
-_TO DO: Add a list of applications included in this repository. So far there are (a) rn-starter, which covers basics, and (b) food, which delves into interesting territory such as Context, building an Express API, and managing In-App Authentication flows._ 
+_TO DO: Add a list of applications included in this repository. So far there are (a) rn-starter, which covers basics, and (b) food, which delves into interesting territory such as Context, building an Express API, and managing In-App Authentication flows. REMOVE ALL OF THIS. IT'S REDUNDANT. Use the index instead. However be sure to list the various apps. Add gifs showing previews of each app's functionality._ 
  
 * React Navigation 5
 * Authentication Flows
