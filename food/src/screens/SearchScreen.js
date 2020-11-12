@@ -4,7 +4,7 @@ import { ResultsList, SearchBar } from '../components'
 import useResults from '../hooks/useResults'
 import COPY from '../copy'
 
-const SearchScreen = ({ navigation }) => { 
+const SearchScreen = () => { 
   const [term, setTerm] = useState('')
   const [searchAPI, results, errorMessage] = useResults()
 
