@@ -5,6 +5,8 @@ import ResultDetail from './ResultDetail'
 
 const ResultsList = ({ results, title }) => {
   const navigation = useNavigation()
+  if (!results.length) return null
+  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
