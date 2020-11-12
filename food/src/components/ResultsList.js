@@ -12,8 +12,8 @@ const ResultsList = ({ results, title }) => {
         horizontal
         showsHorizontalScrollIndicator={false} // always remove scroll bar
         data={results}
-        renderItem={({item}) => ( // TODO pass only ID as the navigation param, i.e. { id: item.id }, there's no need to pass the entire item object 
-          <TouchableOpacity onPress={() => navigation.navigate('Result', item)}>  
+        renderItem={({item}) => (  
+          <TouchableOpacity onPress={() => navigation.navigate('Result', {id: item.id})}>  
             <ResultDetail result={item} />
           </TouchableOpacity>
         )} 
