@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native'
 import useBusiness from '../hooks/useBusiness'
 import STYLES from '../styles'
 
-const ResultShowScreen = props => {
+const BusinessScreen = props => {
   const { id } = props.route.params
   const [results, errorMessage] = useBusiness(id)
    
@@ -17,4 +17,4 @@ const ResultShowScreen = props => {
 
 const styles = StyleSheet.create({})
 
-export default ResultShowScreen
+export default BusinessScreen

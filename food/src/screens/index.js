@@ -1,9 +1,9 @@
-import ResultShowScreen from './ResultShowScreen'
+import BusinessScreen from './BusinessScreen'
 import SearchScreen from './SearchScreen'
 import TestScreen from './TestScreen'
 
 export {
-  ResultShowScreen,
+  BusinessScreen,
   SearchScreen,
   TestScreen, 
 }

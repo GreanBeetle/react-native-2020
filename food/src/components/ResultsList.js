@@ -13,7 +13,7 @@ const ResultsList = ({ results, title }) => {
         showsHorizontalScrollIndicator={false} // always remove scroll bar
         data={results}
         renderItem={({item}) => (  
-          <TouchableOpacity onPress={() => navigation.navigate('Result', {id: item.id})}>  
+          <TouchableOpacity onPress={() => navigation.navigate('Business', {id: item.id})}>  
             <ResultDetail result={item} />
           </TouchableOpacity>
         )} 
