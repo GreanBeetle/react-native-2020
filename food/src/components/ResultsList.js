@@ -1,7 +1,7 @@
 import React from 'react'
 import { FlatList, View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { ResultDetail } from './index'
+import ResultDetail from './ResultDetail'
 
 const ResultsList = ({ results, title }) => {
   const navigation = useNavigation()
