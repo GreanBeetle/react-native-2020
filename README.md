@@ -15,6 +15,16 @@ This is a master repository for a collection of small to medium-sized React Nati
 The goal is to stay on top of the latest React Native trends, components, libraries, features, and best practices. The topics covered in these apps are:  
 
 _TO DO: Add a list of applications included in this repository. So far there are (a) rn-starter, which covers basics (b) food, which delves in to Axios, Fetch, extracting hooks, and API consumption, and (c) blog, which deals with Context API, crud, and data flow ... REMOVE ALL OF THIS. IT'S REDUNDANT. Use the index instead. However be sure to list the various apps. Add gifs showing previews of each app's functionality._ 
+
+#### Note to self regarding git 
+
+To avoid the `you've added a git repository inside your current repository` error do the following
+
+* Initialize `ExampleProject` inside `React-Native-2020`
+* `cd ExampleProject && ls -a`, you should see a `.git` file
+* Remove the `.git` file with `rm -rf .git` and `cd ..` 
+* In the `React-Native-2020` root, run `git add ExampleProject/*`
+* This should circumnavigate the need to add a submodule or track multiple repositories 
  
 ## Index
 
