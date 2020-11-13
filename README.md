@@ -14,49 +14,39 @@ This is a master repository for a collection of small to medium-sized React Nati
 
 The goal is to stay on top of the latest React Native trends, components, libraries, features, and best practices. The topics covered in these apps are:  
 
-_TO DO: Add a list of applications included in this repository. So far there are (a) rn-starter, which covers basics, and (b) food, which delves into interesting territory such as Context, building an Express API, and managing In-App Authentication flows. REMOVE ALL OF THIS. IT'S REDUNDANT. Use the index instead. However be sure to list the various apps. Add gifs showing previews of each app's functionality._ 
+_TO DO: Add a list of applications included in this repository. So far there are (a) rn-starter, which covers basics (b) food, which delves in to Axios, Fetch, extracting hooks, and API consumption, and (c) blog, which deals with Context API, crud, and data flow ... REMOVE ALL OF THIS. IT'S REDUNDANT. Use the index instead. However be sure to list the various apps. Add gifs showing previews of each app's functionality._ 
  
-* React Navigation 5
-* Authentication Flows
-* Redux, Actions, Reducers
-* "Gotchas" regarding State 
-* Layout, Flex, Absolute Fill Objects, etc.  
-* 3rd-party APIs
-* Hooks, reusable and otherwise
-* Constraining views 
-* Context, Advanced State Management
-* Moving data with Context 
-* Data API Sync
-* Building a custom Express API with MongoDB 
-* Understanding the signup flow/process
-* Defining Schemas 
-* JSON Web Tokens, creating a JWT, wiring up JWTs
-* Password hashing, salting and hashing
-* Auth Context
-* React Native Maps 
-* UseCallback hook
-* Coordination between Contexts
-* _Rendering lists the right way!_
-* Authentication with Firebase
-* Processing authentication credentials
-* And more ... 
-
 ## Index
 
-_TO DO: refactor and reorganize using bullet points and sub bullet points. Decide which topics should be included. Decide how and which particular topics ought to be cross-referenced. Add links._
+_TO DO: refactor and reorganize using bullet points and sub bullet points. Decide which topics should be included. Decide how and which particular topics ought to be cross-referenced. Each index item should contain links to the files containing example usage._
 
 * `action` -> `rn-starter` -> `SquareScreen.js` and `CounterScreen`
+* `actions`
+  * `redux` 
 * API -> Yelp - `food/api/yelp` and `SearchScreen` and `SearchBar`
+* Auth Context
+* Authentication 
+  * Firebase 
+  * Flows 
 * Axios (fetch alernative) -> `food/api/yelp` and `food/SearchScreen`
+* components
+  * reusable -> `rn-starter/ImageDetail`, `food/components/ResultsList` etc. 
+* `Context API` 
 * error handling -> `food/SearchScreen/` -> `searchAPI()`
+* Express API
 * `<FlatList />`
   * basics -> `rn-starter/ColorScreen` and `rn-starter/ListScreen`
   * optimizing -> 
   * rendering -> `food/ResultsList`, `food/BusinessScreen`
+  * rendering _correctly_
   * renderItem ->
-* Fragments `<> </>` -> `food/SearchScreen` 
+* Firebase
+* Fragments `<> </>` -> `food/SearchScreen`
+* Hashing
+  * Passwords, salting and hashing
 * Hooks
   * extracting hooks -> `food/hooks/useResults.js` and `food/SearchScreen`
+  * `useCallback`
   * `useEffect` -> `food/hooks/useResults`
   * `useNavigation` -> `food/ResultsList` (React Navigation 5) 
   * `useReducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen`
@@ -66,22 +56,28 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * `rn-starter/ImageScreen`
   * `food/ResultDetail`
   * `food/BusinessScreen` 
+* JWT or JSON Web Tokens
 * Layout
   * Absolute Fill Objects -> `rn-starter` -> `BoxScreen` (cool stuff!) 
   * Flex Box -> `rn-starter/BoxScreen.js`
   * `position: 'absolute'` -> `rn-starter/BoxScreen.js` 
   * `top`, `bottom`, `left`, `right` -> `rn-starter/BoxScreen`
+* Mongo DB 
 * Navigation (React Navigation 5)
   * basic architecture -> `food/navigation`
   * params/passProps -> `food/ResultsList`
   * `useNavigation` -> `food/ResultsList` (React Navigation 5)
+* Node.js
+  * Express API 
 * `props` -> `rn-starter/ImageScreen`  
 * `reducer` -> `rn-starter/SquareScreen` and `CounterScreen
-* reusable components
-  * `rn-starter/ImageDetail`
-  * `food/components/ResultsList`
+* Redux
+  * actions
+  * connect 
+  * dispatch
+  * reducers 
+* Signup/Registration 
 * `<TextInput />` -> `rn-starter/TextScreen`  and `food/SearchBar` and `food/SearchScreen`
-
 
 ### Author
 
