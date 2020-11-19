@@ -41,7 +41,8 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * Axios (fetch alernative) -> `food/api/yelp` and `food/SearchScreen`
 * components
   * reusable -> `rn-starter/ImageDetail`, `food/components/ResultsList` etc. 
-* `Context API` 
+* `Context API`
+  * Context Provider -> `blog` CORRECT? FIX THIS!
 * error handling -> `food/SearchScreen/` -> `searchAPI()`
 * Express API
 * `<FlatList />`
@@ -52,6 +53,7 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * renderItem ->
 * Firebase
 * Fragments `<> </>` -> `food/SearchScreen`
+* Global State Management NECESSARY? 
 * Hashing
   * Passwords, salting and hashing
 * Hooks
