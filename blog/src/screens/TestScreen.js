@@ -4,7 +4,7 @@ import STYLES from '../styles'
 
 const TestScreen = () => {
   return (
-    <View style={STYLES.container}>
+    <View style={STYLES.centered}>
       <Text>Test Screen</Text>
     </View>
   )
