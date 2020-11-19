@@ -30,7 +30,8 @@ To avoid the `you've added a git repository inside your current repository` erro
 
 _TO DO: refactor and reorganize using bullet points and sub bullet points. Decide which topics should be included. Decide how and which particular topics ought to be cross-referenced. Each index item should contain links to the files containing example usage._
 
-* `action` -> `rn-starter` -> `SquareScreen.js` and `CounterScreen`
+* `action`
+  * `rn-starter/SquareScreen` and `rn-starter/CounterScreen` 
 * `actions`
   * `redux` 
 * API -> Yelp - `food/api/yelp` and `SearchScreen` and `SearchBar`

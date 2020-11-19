@@ -13,7 +13,6 @@ const IndexScreen = ({navigation}) => {
    * to the useContext hook 
    */
   const value = useContext(BlogContext)
-  console.log('context value', value)
   
   return (
     <View style={STYLES.centered}>
