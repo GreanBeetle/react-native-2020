@@ -41,8 +41,8 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * Axios (fetch alernative) -> `food/api/yelp` and `food/SearchScreen`
 * components
   * reusable -> `rn-starter/ImageDetail`, `food/components/ResultsList` etc. 
-* `Context API`
-  * Context Provider -> `blog` CORRECT? FIX THIS!
+* Context API
+  * `createContext()` -> `blog/context/BlogContext` 
 * error handling -> `food/SearchScreen/` -> `searchAPI()`
 * Express API
 * `<FlatList />`
