@@ -12,13 +12,16 @@ const IndexScreen = ({navigation}) => {
    * pass the ENTIRE createContext() object i.e. BlogContext
    * to the useContext hook 
    */
-  const blogPosts = useContext(BlogContext)
+  const { data, addBlogPost } = useContext(BlogContext)
+
+  console.log('data', data) // REMOVE 
   
   return (
-    <View style={STYLES.centered}>
+    <View style={STYLES.center}>
+      <Button title="Add Post" onPress={addBlogPost} />
       <FlatList 
-        data={blogPosts}
-        keyExtractor={ blogPosts => blogPosts.title}
+        data={data}
+        keyExtractor={ blogPost => blogPost.title}
         renderItem={({item}) => <Text>{item.title}</Text>}/>
       <Button title="TestScreen" onPress={() => navigation.navigate('Test')}/>
     </View>

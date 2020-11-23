@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 /* 
 The React.createContext() object is the "pipe" that will
@@ -16,16 +16,19 @@ In App.js we wrap  <BlogProvider> around <App />
 WRAPS APP 
 */
 export const BlogProvider = ({children}) => {
-  const blogPosts = [
-    { title: 'Blog Post One'}, 
-    { title: 'Blog Post Two'}, 
-    { title: 'Blog Post Three'}, 
-    { title: 'Blog Post Four'}
+  const [blogPosts, setBlogPosts] = useState([])
 
-  ]
-
+  const addBlogPost = () => {
+    console.log('ADDING POST') // REMOVE
+    console.log('blog posts', blogPosts) // REMOVE 
+    setBlogPosts([
+      ...blogPosts, 
+      {title: `Blog ${blogPosts.length + 1}`}
+    ])
+  } 
+  
   return (
-    <BlogContext.Provider value={blogPosts}>
+    <BlogContext.Provider value={{ data: blogPosts, addBlogPost }}>
       {children}
     </BlogContext.Provider>
   )

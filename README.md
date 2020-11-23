@@ -44,7 +44,8 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * reusable -> `rn-starter/ImageDetail`, `food/components/ResultsList` etc. 
 * Context API
   * `createContext()` -> `blog/context/BlogContext`
-  * `useContext()` hook -> `blog/screens/IndexScreen`  
+  * `useContext()` hook -> `blog/screens/IndexScreen`
+  * `useState` inside Context Provider -> `blog/context/BlogContext`    
 * error handling -> `food/SearchScreen/` -> `searchAPI()`
 * Express API
 * `<FlatList />`
@@ -65,7 +66,10 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * `useEffect` -> `food/hooks/useResults`
   * `useNavigation` -> `food/ResultsList` (React Navigation 5) 
   * `useReducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen`
-  * `useState` -> `rn-starter/CounterScreenCopy` and `rn-starter/ColorScreen`
+  * `useState`
+    * `rn-starter/CounterScreenCopy`
+    * `rn-starter/ColorScreen`
+    * inside ContextProvider -> `blog/context/BlogContext` 
 * Icons -> `food` -> `SearchBar.js`
 * `<Image />`
   * `rn-starter/ImageScreen`
