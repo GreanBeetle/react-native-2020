@@ -50,7 +50,7 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * `<FlatList />`
   * basics -> `rn-starter/ColorScreen` and `rn-starter/ListScreen`
   * optimizing -> 
-  * rendering -> `food/ResultsList`, `food/BusinessScreen`
+  * rendering -> `food/ResultsList`, `food/BusinessScreen`, `blog/IndexScreen`
   * rendering _correctly_
   * renderItem ->
 * Firebase

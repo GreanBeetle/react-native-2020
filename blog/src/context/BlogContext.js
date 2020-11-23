@@ -16,8 +16,16 @@ In App.js we wrap  <BlogProvider> around <App />
 WRAPS APP 
 */
 export const BlogProvider = ({children}) => {
+  const blogPosts = [
+    { title: 'Blog Post One'}, 
+    { title: 'Blog Post Two'}, 
+    { title: 'Blog Post Three'}, 
+    { title: 'Blog Post Four'}
+
+  ]
+
   return (
-    <BlogContext.Provider value={5}>
+    <BlogContext.Provider value={blogPosts}>
       {children}
     </BlogContext.Provider>
   )
