@@ -32,7 +32,7 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 
 * `actions`
   * `rn-starter/SquareScreen` and `rn-starter/CounterScreen` 
-  * `blog/BlogContext`
+  * `blog/BlogContextREDUCER`
 * API -> Yelp - `food/api/yelp` and `SearchScreen` and `SearchBar`
 * Auth Context
 * Authentication 
@@ -42,12 +42,14 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * components
   * reusable -> `rn-starter/ImageDetail`, `food/components/ResultsList` etc. 
 * Context API
-  * `createContext()` -> `blog/context/BlogContext`
+  * Automating Context
+    * `createDataContext`
+  * `createContext()` -> `blog/context/BlogContextCOPY`
   * `useContext()` -> `blog/screens/IndexScreen`
-  * `useReducer()` within ContextProvider -> `blog/context/BlogContext`
+  * `useReducer()` within ContextProvider -> `blog/context/BlogContextREDUCER`
   * `useState()` within ContextProvider -> `blog/context/BlogContextCOPY`
 * `dispatch()`
-  * `blog/context/BlogContext`
+  * `blog/context/BlogContextREDUCER`
   * `rn-starter/SquarScreen`
   * `rn-starter/CounterScreen`
 * error handling -> `food/SearchScreen/` -> `searchAPI()`
@@ -68,12 +70,12 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * `useEffect` -> `food/hooks/useResults`
   * `useNavigation` -> `food/ResultsList` (React Navigation 5) 
   * `useReducer`
-    * within ContextProvider -> `blog/context/BlogContext`
+    * within ContextProvider -> `blog/context/BlogContextREDUCER`
     * `rn-starter/SquareScreen` and `rn-starter/CounterScreen`
   * `useState`
     * `rn-starter/CounterScreenCopy`
     * `rn-starter/ColorScreen`
-    * within ContextProvider -> `blog/context/BlogContext` 
+    * within ContextProvider -> `blog/context/BlogContextCOPY` 
 * Icons -> `food` -> `SearchBar.js`
 * `<Image />`
   * `rn-starter/ImageScreen`
@@ -93,10 +95,6 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * Node.js
   * Express API 
 * `props` -> `rn-starter/ImageScreen`  
-* `reducers` 
-  * `useReducer`
-    * `rn-starter/SquareScreen` and `CounterScreen
-    * `blog/context/BlogContext`
 * Redux 
 * Signup/Registration 
 * `TextInput` -> `rn-starter/TextScreen`  and `food/SearchBar` and `food/SearchScreen`
