@@ -31,6 +31,7 @@ To avoid the `you've added a git repository inside your current repository` erro
 _TO DO: refactor and reorganize using bullet points and sub bullet points. Decide which topics should be included. Decide how and which particular topics ought to be cross-referenced. Each index item should contain links to the files containing example usage._
 
 * `actions`
+  * `blog/createDataContext` example is complex! 
   * `rn-starter/SquareScreen` and `rn-starter/CounterScreen` 
   * `blog/BlogContextREDUCER`
 * API -> Yelp - `food/api/yelp` and `SearchScreen` and `SearchBar`
@@ -50,7 +51,7 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * `Provider`
     * `blog/context/createDataContext`
     * `blog/context/BlogContextCOPY`
-  * `useContext()` -> `blog/screens/IndexScreen`
+  * `useContext()` -> `blog/screens/IndexScreen` and `IndexScreenCopy`
   * `useReducer()` 
     * `createDataContext`
     * within ContextProvider -> `blog/context/BlogContextREDUCER`
@@ -64,7 +65,7 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * `<FlatList />`
   * basics -> `rn-starter/ColorScreen` and `rn-starter/ListScreen`
   * optimizing ?
-  * rendering -> `food/ResultsList`, `food/BusinessScreen`, `blog/IndexScreen`
+  * rendering -> `food/ResultsList`, `food/BusinessScreen`, `blog/IndexScreen` and `IndexScreenCopy`
   * rendering _correctly_ ? 
 * Firebase
 * Fragments `<> </>` -> `food/SearchScreen`
@@ -73,7 +74,7 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * Hooks
   * extracting hooks -> `food/hooks/useResults.js` and `food/SearchScreen`
   * `useCallback`
-  * `useContext` -> `blog/screens/IndexScreen`
+  * `useContext` -> `blog/screens/IndexScreen` and `IndexScreenCopy`
   * `useEffect` -> `food/hooks/useResults`
   * `useNavigation` -> `food/ResultsList` (React Navigation 5) 
   * `useReducer`
