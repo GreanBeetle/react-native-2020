@@ -13,8 +13,6 @@ const IndexScreen = ({navigation}) => {
    * to the useContext hook 
    */
   const { data, addBlogPost } = useContext(BlogContext)
-
-  console.log('data', data) // REMOVE 
   
   return (
     <View style={STYLES.center}>

@@ -30,10 +30,9 @@ To avoid the `you've added a git repository inside your current repository` erro
 
 _TO DO: refactor and reorganize using bullet points and sub bullet points. Decide which topics should be included. Decide how and which particular topics ought to be cross-referenced. Each index item should contain links to the files containing example usage._
 
-* `action`
-  * `rn-starter/SquareScreen` and `rn-starter/CounterScreen` 
 * `actions`
-  * `redux` 
+  * `rn-starter/SquareScreen` and `rn-starter/CounterScreen` 
+  * `blog/BlogContext`
 * API -> Yelp - `food/api/yelp` and `SearchScreen` and `SearchBar`
 * Auth Context
 * Authentication 
@@ -44,8 +43,9 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * reusable -> `rn-starter/ImageDetail`, `food/components/ResultsList` etc. 
 * Context API
   * `createContext()` -> `blog/context/BlogContext`
-  * `useContext()` hook -> `blog/screens/IndexScreen`
-  * `useState` inside Context Provider -> `blog/context/BlogContext`    
+  * `useContext()` -> `blog/screens/IndexScreen`
+  * `useReducer()` within ContextProvider -> `blog/context/BlogContext`
+  * `useState()` within ContextProvider -> `blog/context/BlogContextCOPY`    
 * error handling -> `food/SearchScreen/` -> `searchAPI()`
 * Express API
 * `<FlatList />`
@@ -53,7 +53,7 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * optimizing -> 
   * rendering -> `food/ResultsList`, `food/BusinessScreen`, `blog/IndexScreen`
   * rendering _correctly_
-  * renderItem ->
+  * renderItem 
 * Firebase
 * Fragments `<> </>` -> `food/SearchScreen`
 * Global State Management NECESSARY? 
@@ -65,11 +65,13 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * `useContext` -> `blog/screens/IndexScreen`
   * `useEffect` -> `food/hooks/useResults`
   * `useNavigation` -> `food/ResultsList` (React Navigation 5) 
-  * `useReducer` -> `rn-starter` -> `SquareScreen` and `CounterScreen`
+  * `useReducer`
+    * within ContextProvider -> `blog/context/BlogContext`
+    * `rn-starter/SquareScreen` and `rn-starter/CounterScreen`
   * `useState`
     * `rn-starter/CounterScreenCopy`
     * `rn-starter/ColorScreen`
-    * inside ContextProvider -> `blog/context/BlogContext` 
+    * within ContextProvider -> `blog/context/BlogContext` 
 * Icons -> `food` -> `SearchBar.js`
 * `<Image />`
   * `rn-starter/ImageScreen`
@@ -89,14 +91,13 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * Node.js
   * Express API 
 * `props` -> `rn-starter/ImageScreen`  
-* `reducer` -> `rn-starter/SquareScreen` and `CounterScreen
-* Redux
-  * actions
-  * connect 
-  * dispatch
-  * reducers 
+* `reducers` 
+  * `useReducer`
+    * `rn-starter/SquareScreen` and `CounterScreen
+    * `blog/context/BlogContext`
+* Redux 
 * Signup/Registration 
-* `<TextInput />` -> `rn-starter/TextScreen`  and `food/SearchBar` and `food/SearchScreen`
+* `TextInput` -> `rn-starter/TextScreen`  and `food/SearchBar` and `food/SearchScreen`
 
 ### Author
 

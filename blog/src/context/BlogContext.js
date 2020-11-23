@@ -1,4 +1,10 @@
-import React, { useState } from 'react'
+import React, { useReducer } from 'react'
+
+
+const blogReducer = () => {
+
+}
+
 
 /* 
 The React.createContext() object is the "pipe" that will
@@ -16,19 +22,24 @@ In App.js we wrap  <BlogProvider> around <App />
 WRAPS APP 
 */
 export const BlogProvider = ({children}) => {
-  const [blogPosts, setBlogPosts] = useState([])
-
-  const addBlogPost = () => {
-    console.log('ADDING POST') // REMOVE
-    console.log('blog posts', blogPosts) // REMOVE 
-    setBlogPosts([
-      ...blogPosts, 
-      {title: `Blog ${blogPosts.length + 1}`}
-    ])
-  } 
   
+  /* 
+  With useReducer() the first argument is always the reducer 
+  that we want to use. In this case, we're using
+  blogReducer, the method we wrote above. 
+  The second argument is the initial state object. 
+  In the case we're using an empty array. 
+  
+  useReducer(blogReducer, [])
+
+  From the useReducer() function, we destructure 
+  (a) the state value, which in this case is blogPosts, and
+  (b) dispatch, which dispatches an action to change the state value
+  */
+  const [blogPosts, dispatch] = useReducer(blogReducer, [])
+
   return (
-    <BlogContext.Provider value={{ data: blogPosts, addBlogPost }}>
+    <BlogContext.Provider value={{ data: blogPosts }}>
       {children}
     </BlogContext.Provider>
   )
