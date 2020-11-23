@@ -36,6 +36,12 @@ export default (reducer, actions, initialState) => {
     */
     const boundActions = {}
     for (let key in actions) {
+      /* 
+      NOTE TO SELF 
+      Figure out exactly what is happening here. This is the only part I did 
+      not quite grok. Look at this more closely then explain it here in the 
+      notes. 
+      */
       boundActions[key] = actions[key](dispatch)
     }
     

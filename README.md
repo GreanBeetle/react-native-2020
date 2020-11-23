@@ -30,9 +30,12 @@ To avoid the `you've added a git repository inside your current repository` erro
 
 _TO DO: refactor and reorganize using bullet points and sub bullet points. Decide which topics should be included. Decide how and which particular topics ought to be cross-referenced. Each index item should contain links to the files containing example usage._
 
+_TO DO: refactor but DO NOT duplicate any particular term. useReducer(), for example, should be in only one place, NOT in the Hooks AND Context API sections. Best to keep it only in Hooks. Same for useState and a number of other things._
+
 * `actions`
   * `blog/createDataContext` example is complex! 
-  * `rn-starter/SquareScreen` and `rn-starter/CounterScreen` 
+  * `rn-starter/SquareScreen`
+  * `rn-starter/CounterScreen` 
   * `blog/BlogContextREDUCER`
 * API -> Yelp - `food/api/yelp` and `SearchScreen` and `SearchBar`
 * Auth Context
@@ -44,7 +47,7 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * reusable -> `rn-starter/ImageDetail`, `food/components/ResultsList` etc. 
 * Context API
   * Automating
-    * `createDataContext`
+    * `createDataContext` magic! 
   * `createContext()`
     * `blog/context/createDataContext`
     * `blog/context/BlogContextCOPY`
@@ -58,7 +61,7 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * `useState()` within ContextProvider -> `blog/context/BlogContextCOPY`
 * `dispatch()`
   * `blog/context/BlogContextREDUCER`
-  * `rn-starter/SquarScreen`
+  * `rn-starter/SquareScreen`
   * `rn-starter/CounterScreen`
 * error handling -> `food/SearchScreen/` -> `searchAPI()`
 * Express API
