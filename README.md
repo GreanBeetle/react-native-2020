@@ -42,11 +42,18 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
 * components
   * reusable -> `rn-starter/ImageDetail`, `food/components/ResultsList` etc. 
 * Context API
-  * Automating Context
+  * Automating
     * `createDataContext`
-  * `createContext()` -> `blog/context/BlogContextCOPY`
+  * `createContext()`
+    * `blog/context/createDataContext`
+    * `blog/context/BlogContextCOPY`
+  * `Provider`
+    * `blog/context/createDataContext`
+    * `blog/context/BlogContextCOPY`
   * `useContext()` -> `blog/screens/IndexScreen`
-  * `useReducer()` within ContextProvider -> `blog/context/BlogContextREDUCER`
+  * `useReducer()` 
+    * `createDataContext`
+    * within ContextProvider -> `blog/context/BlogContextREDUCER`
   * `useState()` within ContextProvider -> `blog/context/BlogContextCOPY`
 * `dispatch()`
   * `blog/context/BlogContextREDUCER`
@@ -70,6 +77,7 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * `useEffect` -> `food/hooks/useResults`
   * `useNavigation` -> `food/ResultsList` (React Navigation 5) 
   * `useReducer`
+    * `createDataContext`
     * within ContextProvider -> `blog/context/BlogContextREDUCER`
     * `rn-starter/SquareScreen` and `rn-starter/CounterScreen`
   * `useState`
