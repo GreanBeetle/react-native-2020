@@ -45,18 +45,20 @@ _TO DO: refactor and reorganize using bullet points and sub bullet points. Decid
   * `createContext()` -> `blog/context/BlogContext`
   * `useContext()` -> `blog/screens/IndexScreen`
   * `useReducer()` within ContextProvider -> `blog/context/BlogContext`
-  * `useState()` within ContextProvider -> `blog/context/BlogContextCOPY`    
+  * `useState()` within ContextProvider -> `blog/context/BlogContextCOPY`
+* `dispatch()`
+  * `blog/context/BlogContext`
+  * `rn-starter/SquarScreen`
+  * `rn-starter/CounterScreen`
 * error handling -> `food/SearchScreen/` -> `searchAPI()`
 * Express API
 * `<FlatList />`
   * basics -> `rn-starter/ColorScreen` and `rn-starter/ListScreen`
-  * optimizing -> 
+  * optimizing ?
   * rendering -> `food/ResultsList`, `food/BusinessScreen`, `blog/IndexScreen`
-  * rendering _correctly_
-  * renderItem 
+  * rendering _correctly_ ? 
 * Firebase
 * Fragments `<> </>` -> `food/SearchScreen`
-* Global State Management NECESSARY? 
 * Hashing
   * Passwords, salting and hashing
 * Hooks

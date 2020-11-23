@@ -1,8 +1,25 @@
 import React, { useReducer } from 'react'
 
-
-const blogReducer = () => {
-
+/*
+To reiterate a previous point, our reducer takes
+two arguments
+(a) state (although this could be anything! i.e. blogPosts)
+(b) action 
+*/
+const blogReducer = (state, action) => {
+  switch (action.type) {
+    case 'ADD_BLOGPOST': 
+      return [...state, { title: `Post No. ${state.length+1}`}]
+      break
+    case 'DELETE_BLOGPOST': 
+      return state
+      break 
+    case 'EDIT_BLOGPOST': 
+      return state 
+      break
+    default: 
+      return state
+  }
 }
 
 
@@ -18,11 +35,10 @@ This Provider is an HOC of sorts, as it
 accepts child components as arguments and returns, well, 
 child components wrapped with BlogContext. 
 In App.js we wrap  <BlogProvider> around <App /> 
-(or around whatever component we're returning, in my case I'm return <Navigation/>)
+(or around whatever component we're returning, in my case I return <Navigation/>)
 WRAPS APP 
 */
-export const BlogProvider = ({children}) => {
-  
+export const BlogProvider = ({children}) => { 
   /* 
   With useReducer() the first argument is always the reducer 
   that we want to use. In this case, we're using
@@ -38,8 +54,14 @@ export const BlogProvider = ({children}) => {
   */
   const [blogPosts, dispatch] = useReducer(blogReducer, [])
 
+  /* 
+  Once again, using dispatch() magic to dispatch an action to our reducer ... 
+  */
+  const addBlogPost = () => dispatch({type: 'ADD_BLOGPOST'})
+  
+
   return (
-    <BlogContext.Provider value={{ data: blogPosts }}>
+    <BlogContext.Provider value={{ data: blogPosts, addBlogPost }}>
       {children}
     </BlogContext.Provider>
   )
