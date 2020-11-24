@@ -3,7 +3,7 @@ useContext() is the hook that allows us access to the
 Context object that, in our example, we created in context/BlogContext.js
 */
 import React, { useContext } from 'react'
-import { View, Text, FlatList, StyleSheet, Button } from 'react-native'
+import { View, Text, FlatList, StyleSheet, Button, TouchableOpacity } from 'react-native'
 import { Context as BlogContext } from '../context/BlogContext' 
 import STYLES from '../styles'
 import { FontAwesome } from '@expo/vector-icons'
@@ -15,7 +15,7 @@ const IndexScreen = ({navigation}) => {
    * pass the ENTIRE createContext() object i.e. Context as BlogContext
    * to the useContext hook 
    */
-  const { state, addBlogPost } = useContext(BlogContext)
+  const { state, addBlogPost, deleteBlogPost } = useContext(BlogContext)
   
   return (
     <View>
@@ -25,8 +25,10 @@ const IndexScreen = ({navigation}) => {
         keyExtractor={ blogPost => blogPost.title}
         renderItem={({item}) => (
             <View style={styles.row}>
-              <Text style={styles.title}>{item.title}</Text>
-              <FontAwesome name="trash" style={styles.icon} />
+              <Text style={styles.title}>{item.title} - {item.id}</Text>
+              <TouchableOpacity onPress={() => deleteBlogPost(item.id)}>
+                <FontAwesome name="trash" style={styles.icon} />
+              </TouchableOpacity>
             </View>
           )}
         />
