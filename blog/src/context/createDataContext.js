@@ -35,15 +35,10 @@ export default (reducer, actions, initialState) => {
     create editBlogPost() and deleteBlogPost() functions as well.  
     */
     const boundActions = {}
-    for (let key in actions) {
-      /* 
-      NOTE TO SELF 
-      Figure out exactly what is happening here. This is the only part I did 
-      not quite grok. Look at this more closely then explain it here in the 
-      notes. 
-      */
-      boundActions[key] = actions[key](dispatch)
-    }
+
+    // All we are doing here is passing dispatch() to each function in the actions object
+    for (let key in actions) boundActions[key] = actions[key](dispatch)
+    
     
     return (
       <Context.Provider value={{ state, ...boundActions }}>

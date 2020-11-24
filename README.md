@@ -46,8 +46,7 @@ _TO DO: refactor but DO NOT duplicate any particular term. useReducer(), for exa
 * components
   * reusable -> `rn-starter/ImageDetail`, `food/components/ResultsList` etc. 
 * Context API
-  * Automating
-    * `createDataContext` magic! 
+  * Automating -> `createDataContext` magic! 
   * `createContext()`
     * `blog/context/createDataContext`
     * `blog/context/BlogContextCOPY`
@@ -55,10 +54,6 @@ _TO DO: refactor but DO NOT duplicate any particular term. useReducer(), for exa
     * `blog/context/createDataContext`
     * `blog/context/BlogContextCOPY`
   * `useContext()` -> `blog/screens/IndexScreen` and `IndexScreenCopy`
-  * `useReducer()` 
-    * `createDataContext`
-    * within ContextProvider -> `blog/context/BlogContextREDUCER`
-  * `useState()` within ContextProvider -> `blog/context/BlogContextCOPY`
 * `dispatch()`
   * `blog/context/BlogContextREDUCER`
   * `rn-starter/SquareScreen`
@@ -83,7 +78,8 @@ _TO DO: refactor but DO NOT duplicate any particular term. useReducer(), for exa
   * `useReducer`
     * `createDataContext`
     * within ContextProvider -> `blog/context/BlogContextREDUCER`
-    * `rn-starter/SquareScreen` and `rn-starter/CounterScreen`
+    * `rn-starter/SquareScreen`
+    * `rn-starter/CounterScreen`
   * `useState`
     * `rn-starter/CounterScreenCopy`
     * `rn-starter/ColorScreen`
