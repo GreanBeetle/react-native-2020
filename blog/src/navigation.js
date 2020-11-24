@@ -3,7 +3,8 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { 
   CreateScreen,
-  IndexScreen, 
+  IndexScreen,
+  ShowScreen, 
   TestScreen 
 } from './screens'
 
@@ -13,6 +14,7 @@ const StackScreens = () => (
   <Stack.Navigator initialRouteName="Index">
     <Stack.Screen name="Index" component={IndexScreen} />
     <Stack.Screen name="Create" component={CreateScreen} />
+    <Stack.Screen name="Show" component={ShowScreen} />
     <Stack.Screen name="Test" component={TestScreen} />
   </Stack.Navigator>
 )

@@ -72,9 +72,14 @@ _TO DO: refactor but DO NOT duplicate any particular term. useReducer(), for exa
 * Hooks
   * extracting hooks -> `food/hooks/useResults.js` and `food/SearchScreen`
   * `useCallback`
-  * `useContext` -> `blog/screens/IndexScreen` and `IndexScreenCopy`
-  * `useEffect` -> `food/hooks/useResults`
-  * `useNavigation` -> `food/ResultsList` (React Navigation 5) 
+  * `useContext`
+    * `blog/IndexScreen`
+    * `blog/IndexScreenCopy`
+  * `useEffect`
+    * `food/hooks/useResults`
+  * `useNavigation`
+    * `food/ResultsList` (React Navigation 5)
+    * `blog/IndexScreen`  
   * `useReducer`
     * `createDataContext`
     * within ContextProvider -> `blog/context/BlogContextREDUCER`
@@ -84,7 +89,9 @@ _TO DO: refactor but DO NOT duplicate any particular term. useReducer(), for exa
     * `rn-starter/CounterScreenCopy`
     * `rn-starter/ColorScreen`
     * within ContextProvider -> `blog/context/BlogContextCOPY` 
-* Icons -> `food` -> `SearchBar.js`
+* Icons
+  * `food/SearchBar`
+  * `blog/IndexScreen` 
 * `<Image />`
   * `rn-starter/ImageScreen`
   * `food/ResultDetail`
@@ -98,8 +105,12 @@ _TO DO: refactor but DO NOT duplicate any particular term. useReducer(), for exa
 * Mongo DB 
 * Navigation (React Navigation 5)
   * basic architecture -> `food/navigation`
-  * params/passProps -> `food/ResultsList`
-  * `useNavigation` -> `food/ResultsList` (React Navigation 5)
+  * params/passProps
+    * `food/ResultsList`
+    * `blog/IndexScreen` 
+  * `useNavigation`
+    * `food/ResultsList` (React Navigation 5)
+    * `blog/IndexScreen` 
 * Node.js
   * Express API 
 * `props` -> `rn-starter/ImageScreen`  

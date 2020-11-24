@@ -4,13 +4,14 @@ Context object that, in our example, we created in context/BlogContext.js
 */
 import React, { useContext } from 'react'
 import { View, Text, FlatList, StyleSheet, Button, TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import { Context as BlogContext } from '../context/BlogContext' 
 import STYLES from '../styles'
 import { FontAwesome } from '@expo/vector-icons'
 import COLORS from '../colors'
 
 
-const IndexScreen = ({navigation}) => {
+const IndexScreen = ({ navigation }) => {
   /**
    * pass the ENTIRE createContext() object i.e. Context as BlogContext
    * to the useContext hook 
@@ -24,12 +25,14 @@ const IndexScreen = ({navigation}) => {
         data={state}
         keyExtractor={ blogPost => blogPost.title}
         renderItem={({item}) => (
+          <TouchableOpacity onPress={() => navigation.navigate('Show', item)}>
             <View style={styles.row}>
               <Text style={styles.title}>{item.title} - {item.id}</Text>
               <TouchableOpacity onPress={() => deleteBlogPost(item.id)}>
                 <FontAwesome name="trash" style={styles.icon} />
               </TouchableOpacity>
             </View>
+          </TouchableOpacity>
           )}
         />
     </View>
