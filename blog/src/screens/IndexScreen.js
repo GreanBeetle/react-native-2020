@@ -6,6 +6,9 @@ import React, { useContext } from 'react'
 import { View, Text, FlatList, StyleSheet, Button } from 'react-native'
 import { Context as BlogContext } from '../context/BlogContext' 
 import STYLES from '../styles'
+import { FontAwesome } from '@expo/vector-icons'
+import COLORS from '../colors'
+
 
 const IndexScreen = ({navigation}) => {
   /**
@@ -15,17 +18,37 @@ const IndexScreen = ({navigation}) => {
   const { state, addBlogPost } = useContext(BlogContext)
   
   return (
-    <View style={STYLES.center}>
+    <View>
       <Button title="Add Post" onPress={addBlogPost} />
       <FlatList 
         data={state}
         keyExtractor={ blogPost => blogPost.title}
-        renderItem={({item}) => <Text>{item.title}</Text>}/>
-      <Button title="TestScreen" onPress={() => navigation.navigate('Test')}/>
+        renderItem={({item}) => (
+            <View style={styles.row}>
+              <Text style={styles.title}>{item.title}</Text>
+              <FontAwesome name="trash" style={styles.icon} />
+            </View>
+          )}
+        />
     </View>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  row: {
+    flexDirection: 'row', 
+    justifyContent: 'space-between',
+    padding: 15, 
+    borderBottomWidth: 1,
+    borderColor: COLORS.borderGray
+  }, 
+  title: {
+    fontSize: 18
+  }, 
+  icon: {
+    fontSize: 24, 
+    color: COLORS.red
+  }
+})
 
 export default IndexScreen 
